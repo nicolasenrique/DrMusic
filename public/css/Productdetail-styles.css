@@ -1,0 +1,168 @@
+/* Pallette
+#F2EDE4
+#D93611
+#BF1304
+#590F08
+#0D0D0D
+Pallette */
+
+/* Basic Styling */
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #f2ede4;
+}
+
+.container {
+  flex-direction: column;
+  margin-top: 60px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+img {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  border-radius: 5%;
+}
+
+/* Columns */
+.left-column {
+  position: relative;
+  width: 100%;
+}
+
+.right-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/*Left Column */
+
+.product-img {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product-price {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+}
+
+/*Product Details */
+
+.product-img-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50%;
+}
+
+.column {
+  margin: 10px;
+  align-self: center;
+}
+.product-description {
+  text-align: center;
+}
+
+/*Product Configuration*/
+.product-configuration form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-configuration {
+  font-size: 20px;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.product-configuration div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.radio-buttons {
+  display: flex;
+  align-items: center;
+  border: solid 1px grey;
+  border-radius: 5%;
+  width: 50%;
+  padding: 5%;
+}
+
+/*Product Pricing*/
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 2px;
+}
+
+.buy-btn {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 70%;
+  font-size: 18px;
+  opacity: 0.7;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transition: 0.3s;
+}
+.buy-btn:hover {
+  transition: 450ms;
+  background-color: rgb(100, 100, 100);
+}
+
+.wishlist-btn {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #bf1304;
+  text-align: center;
+  cursor: pointer;
+  width: 70%;
+  font-size: 18px;
+  opacity: 0.7;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transition: 0.3s;
+}
+.wishlist-btn:hover {
+  transition: 450ms;
+  background-color: #ce5b50;
+}
+
+.mercadopago-img {
+  width: 70%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}

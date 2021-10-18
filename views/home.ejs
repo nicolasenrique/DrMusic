@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+ 
+    <link rel="stylesheet" href="./css/style-home.css" />
+    <title>Bienvenido a Dr Music</title>
+  </head>
+  <body>
+    <!--INICIO DEL HEADER-->
+    <%- include('./partials/header') %>
+    <!--FIN DEL HEADER-->
+
+    <main>
+      <div class="banners">
+        <img
+          class="banner-inicial"
+          src="img/ahora12.jpeg"
+          alt="banner-inicial"
+        />
+      </div>
+
+      <section class="cuerpo-home">
+        <a class=link href="/products/list"
+          ><div class="ir-tienda">Ir a la Tienda</div></a
+        >
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <img class="mySlides" src="img/d-banner-67.jpeg" />
+          <img class="mySlides" src="img/d-banner-66.jpeg" />
+          <img class="mySlides" src="img/d-banner-64.jpeg" />
+        </div>
+
+        <!-- Script para Slideshow -->
+        <script>
+          var myIndex = 0;
+          carousel();
+
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+              myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+          }
+        </script>
+        <!-- Fin script para Slideshow -->
+        <h3 class="novedad-texto">Lo nuevo del 2021</h3>
+        <div class="novedad">
+          <img class="novedad-1" src="img/novedad-1.jpg" alt="novedad-1" />
+          <img class="novedad-2" src="img/novedad-2.jpg" alt="novedad-2" />
+          <img class="novedad-3" src="img/novedad-3.jpg" alt="novedad-3" />
+          <img class="novedad-4" src="img/novedad-4.jpg" alt="novedad-4" />
+        </div>
+
+        <h3 class="mas-vendido-texto">Nuestros productos mas vendidos</h3>
+        <div class="mas-vendidos">
+          <article class="mas-vendido-1">
+            <img
+              class="foto-mas-vendido-1"
+              src="<%= productos[0].foto %>"
+              alt="mas-vendido-1"
+            />
+            <div class="article-data">
+              <p class="precio"><%= productos[0].precio %></p>
+              <p class="descuento"><%= productos[0].descuento %></p>
+            </div>
+            <h4 class="producto"><%= productos[0].nombre %></h4>
+          </article>
+          <article class="mas-vendido-2">
+            <img
+              class="foto-mas-vendido-2"
+              src="<%= productos[1].foto %>"
+              alt="mas-vendido-2"
+            />
+            <div class="article-data">
+              <p class="precio"><%= productos[1].precio %></p>
+              <p class="descuento"><%= productos[1].descuento %></p>
+            </div>
+            <h4 class="producto"><%= productos[1].nombre %></h4>
+          </article>
+          <article class="mas-vendido-3">
+            <img
+              class="foto-mas-vendido-3"
+              src="<%= productos[2].foto %>"
+              alt="mas-vendido-3"
+            />
+            <div class="article-data">
+              <p class="precio"><%= productos[2].precio %></p>
+              <p class="descuento"><%= productos[2].descuento %></p>
+            </div>
+            <h4 class="producto"><%= productos[2].nombre %></h4>
+          </article>
+          <article class="mas-vendido-4">
+            <a href="/products/description"
+              ><img
+                class="foto-mas-vendido-4"
+                src="<%= productos[3].foto %>"
+                alt="mas-vendido-4"
+              />
+            </a>
+            <div class="article-data">
+              <p class="precio"><%= productos[3].precio %></p>
+              <p class="descuento"><%= productos[3].descuento %></p>
+            </div>
+            <h4 class="producto"><%= productos[3].nombre %></h4>
+          </article>
+        </div>
+      </section>
+
+      <div class="banners"></div>
+    </main>
+
+    <!--INICIO DEL FOOTER-->
+    <%- include('./partials/footer') %>
+    <!--FIN DEL FOOTER-->
+  </body>
+</html>

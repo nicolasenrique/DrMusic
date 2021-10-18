@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f2ede4;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condense&display=swap');
+<script src="https://kit.fontawesome.com/89e7bf6205.js" crossorigin="anonymous"></script> */
+
+tbody {
+  color: black;
+}
+
+tbody {
+  color: blue;
+}
+tfoot {
+  color: black;
+  text-align: right;
+}
+
+.tabla-carrito {
+  background-color: white;
+  position: relative;
+  left: 12.5%;
+  top: 80px;
+  margin-bottom: 200px;
+  width: 75%;
+}
+
+.boton-mas-menos {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 10px;
+}
+
+.cantidad {
+  height: 24px;
+  line-height: 60px;
+  padding: 0;
+  text-align: center;
+  width: 60px;
+  display: block;
+  margin: auto;
+}
+
+.display-flex-nav2 {
+  list-style: none;
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.boton {
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 15px;
+}
+.botones-carrito {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 12.5%;
+  top: -80px;
+}
+
+body {
+  background-color: #f2ede4;
+}
+
+a[disabled="disabled"] {
+  pointer-events: none;
+}
+
+.display-flex-titulo {
+  position: relative;
+  left: 10%;
+  top: 70px;
+  width: 77%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icono {
+  color: #bf2431;
+  text-align: center;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: 1px solid rgb(168, 150, 150);
+}
+
+.ocultar {
+  background-color: #f2ede4;
+  /* border-color: #F2EDE4; */
+  border-left-color: #f2ede4;
+  border-bottom-color: #f2ede4;
+}
+thead,
+tfoot {
+  background-color: rgb(231, 227, 227);
+  padding: 5px;
+}

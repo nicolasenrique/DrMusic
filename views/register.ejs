@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/css/style-register.css" />
+    <title>Register - Dr Music</title>
+  </head>
+  <body>
+
+    <!--INICIO DEL HEADER-->
+    <%- include('./partials/header') %>
+    <!--FIN DEL HEADER-->
+
+    <div class="logo-mediano">
+      <img class="mid-logo" src="/img/Dr-F2EDE4.png" alt="our-logo" />
+    </div>
+    <div>
+      <p class="message-create">Create your account</p>
+    </div>
+
+    <form action="/log-in" method="POST" class="main-form">
+      <div class="complete-name">
+        <input type="text" name="name" placeholder="First Name" class="name" />
+        <input
+          type="text"
+          name="last-name"
+          placeholder="Last Name"
+          class="last-name"
+        />
+      </div>
+      <div class="this">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p>This cannot be blank</p>
+      </div>
+      <div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          class="mail"
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password                   show"
+          class="password"
+        />
+      </div>
+      <div class="create-account-buttom">
+        <button type="submit" name="create-account" class="create-account-tex">
+          CREATE ACCOUNT
+        </button>
+      </div>
+
+      <div class="by">
+        <p class="by-low">By continuing, yoy agree to Dr. Music's</p>
+        <p class="by-low-red">Privacy Policy</p>
+        <p class="by-low">and</p>
+        <p class="by-low-red">Terms of use.</p>
+      </div>
+      <div class="already">
+        <p class="already-low">Already have a Dr. Music account</p>
+        <a href="/users/login"><p class="already-low-red">Sign in</p></a>
+      </div>
+    </form>
+
+    <!--INICIO DEL FOOTER-->
+    <%- include('./partials/footer') %>
+    <!--FIN DEL FOOTER-->
+    
+  </body>
+</html>

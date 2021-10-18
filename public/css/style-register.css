@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f2ede4;
+}
+
+.full-logo {
+  width: 30%;
+}
+.logo-mediano {
+  text-align: center;
+  padding: 30px;
+}
+.mid-logo {
+  width: 16%;
+  margin: 5px;
+}
+.message-create {
+  font-weight: bold;
+  margin: 4px;
+  font-size: 17px;
+  text-align: center;
+}
+.main-form {
+  display: block;
+  text-align: center;
+}
+.complete-name {
+  display: flex;
+  justify-content: center;
+}
+.this {
+  display: flex;
+  justify-content: center;
+  color: #bf1304;
+  font-size: 12px;
+  align-self: center;
+}
+.mail,
+.password {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 320px;
+}
+.name,
+.last-name {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 150px;
+}
+.create-account-buttom {
+  margin: auto;
+  width: 320px;
+  background-color: #bf1304;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.create-account-tex {
+  text-align: center;
+  background-color: #bf1304;
+  font-weight: bold;
+  color: #f2ede4;
+  font-weight: bold;
+  border: none;
+}
+
+.by {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.already {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+}
+.by-low,
+.already-low {
+  font-size: 12px;
+}
+.by-low-red,
+.already-low-red {
+  color: #bf1304;
+  font-size: 12px;
+  text-align: center;
+  margin: 0 5px 0 5px;
+}
+
+@media (min-width: 769px) {
+  .full-logo {
+    width: 10%;
+  }
+  .message-create {
+    font-size: 22px;
+  }
+  .mail,
+  .password, .name, .last-name {
+    font-size: 14px;
+  }
+  .create-account-tex {
+    font-size: 18px;
+  }
+  .by-low,
+  .by-low-red,
+  .already-low,
+  .already-low-red {
+    font-size: 15px;
+  }
+  .mail,
+  .password,
+  .create-account-buttom {
+    width: 500px;
+  }
+  .name,
+  .last-name {
+    width: 240px;
+  }
+}
+@media (min-width: 1280px) {
+  .full-logo {
+    width: 8%;
+  }
+  .message-create {
+    font-size: 27px;
+  }
+  .mail,
+  .password,.name, .last-name {
+    font-size: 16px;
+  }
+  .create-account-tex {
+    font-size: 21px;
+  }
+  .by-low,
+  .by-low-red,
+  .already-low,
+  .already-low-red {
+    font-size: 17px;
+  }
+  .mail,
+  .password,
+  .create-account-buttom {
+    width: 600px;
+  }
+  .name,
+  .last-name {
+    width: 290px;
+  }
+  .mid-logo {
+    width: 8%;
+  }
+}

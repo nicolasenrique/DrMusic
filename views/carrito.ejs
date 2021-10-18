@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/carrito_compra.css">    
+    <script src="https://kit.fontawesome.com/89e7bf6205.js" crossorigin="anonymous"></script>
+</head>
+<body>    
+<!--INICIO DEL HEADER-->
+<%- include('./partials/header') %>
+<!--FIN DEL HEADER-->
+
+    <div>
+        <ul class="display-flex-nav2">            
+            <li><a href="/">Inicio</a></li>
+            <li><a href="#"  disabled="disabled">Su carrito</a></li>
+        </ul>
+    </div>
+
+    <div class="display-flex-titulo">
+        <h2>Productos en su carrito</h2>
+        <h5>Su carrito tiene 1 producto</h4>
+    </div>
+
+    <main>
+        <!-- Inicio contenido del carrito -->
+        <!-- IMPORTANTE: se deja la estructura que deberemos poblar en la medida que el 
+            cliente/usuario seleccione elementos que desea comprar
+         -->
+        <div>
+            <table class="tabla-carrito"> <!-- tabla compra -->
+               <thead> <!-- header tabla -->
+                  <tr>
+                     <th>Producto</th>
+                     <th>Descripción</th>
+                     <th>Disponible</th>
+                     <th>Precio unitario</th>
+                     <th>Cant.</th>
+                     <th>Total</th>
+                     <th>Borrar</th>
+                  </tr>
+               </thead> <!-- FIN header tabla -->                              
+               <tfoot> <!-- footer tabla -->
+                  <tr>
+                     <td rowspan="3" colspan="2" class="ocultar"> </td>
+                     <td colspan="3">Total productos</td>
+                     <td colspan="2">$ 250.000</td>
+                  </tr>
+    
+                  <tr>
+                     <td colspan="3">Impuestos</td>
+                     <td colspan="2">$ 52.500</td>
+                  </tr>
+                  <tr>
+                     <td colspan="3">
+                        <span>Total</span>
+                        <div>
+                        </div>
+                     </td>
+                     <td colspan="2">
+                        <span>$302.500</span>
+                     </td>
+                  </tr>
+               </tfoot> <!-- FIN footer tabla -->
+               <tbody> <!-- body tabla -->
+                  <tr>
+                     <td>
+                        <a href="#"><img src="img/bajo-electrico-trbx-174-azulmetallic-blue.jpg" alt="BAJO ELÉCTRICO TRBX-174 AZUL/METALLIC BLUE"></a>
+                     </td>
+                     <td data-title="Description">
+                        <p><a href="#">BAJO ELÉCTRICO TRBX-174 AZUL/METALLIC BLUE</a></p>
+                        <small>
+                        SKU : TRBX174DBM00
+                        </small>
+                     </td>
+                     <td>
+                        <span>
+                        En stock
+                        </span>
+                     </td>
+                     <td>
+                        <span>
+                        <span>$250.000</span>
+                        </span>
+                     </td>
+                     <td>                    
+                        <input type="text"  size="1"   value="1" readonly class="cantidad">
+                        <div class="boton-mas-menos">
+                           <input type="submit" value=" + ">
+                           <input type="submit" value=" - ">                       
+                        </div>
+                     </td>
+                     <td>
+                        <span>$250.000</span>
+                     </td>
+                     <td>
+                        <div>                       
+                         <i class="fas fa-trash-alt icono"></i>
+                        </div>
+                     </td>
+                  </tr>
+               </tbody> <!-- FIN body tabla -->
+            </table> <!-- FIN tabla compra -->
+         </div>
+         <!-- FIN tabla contenido del carrito -->          
+    </main>
+    <div class="botones-carrito">
+        <input type="button" value="CONTINUAR CON LA COMPRA" class="boton">
+        <input type="button" value="IR A LA CAJA" class="boton">
+    </div>
+
+    <!--INICIO DEL FOOTER-->
+    <%- include('./partials/footer') %>
+    <!--FIN DEL FOOTER-->
+    
+</body>
+</html>

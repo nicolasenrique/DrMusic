@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f2ede4;
+}
+
+.full-logo {
+  width: 30%;
+}
+.logo-mediano {
+  text-align: center;
+  padding: 30px;
+}
+.mid-logo {
+  width: 16%;
+  margin: 5px;
+}
+.message-sign-in {
+  font-weight: bold;
+  margin: 4px;
+  font-size: 17px;
+  text-align: center;
+}
+.main-form {
+  display: block;
+  text-align: center;
+}
+.mail,
+.password {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 320px;
+}
+.sign-in-buttom {
+  margin: auto;
+  width: 320px;
+  background-color: #bf1304;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  color: #f2ede4;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.sign-in-tex {
+  text-align: center;
+  background-color: #bf1304;
+  font-weight: bold;
+  color: #f2ede4;
+  font-weight: bold;
+  border: none;
+}
+.forgot {
+  font-weight: bold;
+  margin: 17px 0 10px 0;
+  font-size: 14px;
+  color: rgb(73, 70, 70);
+  text-align: center;
+  padding: 20px;
+}
+.dont-have {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.dont-have-low {
+  font-size: 12px;
+}
+.dont-have-low-red {
+  color: #bf1304;
+  font-size: 12px;
+  text-align: center;
+  margin-left: 5px;
+}
+@media (min-width: 769px) {
+  .full-logo {
+    width: 10%;
+  }
+  .message-sign-in {
+    font-size: 22px;
+  }
+  .mail,
+  .password {
+    font-size: 14px;
+  }
+  .sign-in-tex {
+    font-size: 18px;
+  }
+  .dont-have-low,
+  .dont-have-low-red {
+    font-size: 15px;
+  }
+  .mail,
+  .password,
+  .sign-in-buttom {
+    width: 500px;
+  }
+  .name,
+  .last-name {
+    width: 240px;
+  }
+}
+@media (min-width: 1280px) {
+  .full-logo {
+    width: 8%;
+  }
+  .message-sign-in {
+    font-size: 27px;
+  }
+  .mail,
+  .password {
+    font-size: 16px;
+  }
+  .sign-in-tex {
+    font-size: 21px;
+  }
+  .dont-have-low,
+  .dont-have-low-red{
+    font-size: 17px;
+  }
+  .mail,
+  .password,
+  .sign-in-buttom {
+    width: 600px;
+  }
+  .name,
+  .last-name {
+    width: 290px;
+  }
+  .mid-logo {
+    width: 8%;
+  }
+}

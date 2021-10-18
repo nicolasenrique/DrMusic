@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/Productdetail-styles.css"/>
+    <title>Descripción del Producto</title>
+  </head>
+  <body>
+
+<!--INICIO DEL HEADER-->
+<%- include('./partials/header') %>
+<!--FIN DEL HEADER-->
+
+    <main class="container">
+      <!-- Left Column-->
+      <div class="left-column">
+        <div class="img-container">
+          <!--Main Picture-->
+          <img
+            class="product-img"
+            src="/img/Gibson-1.webp"
+            alt="Guitar"
+          />
+          <!--Row Picture-->
+          <div class="product-img-row">
+            <div class="column">
+              <img
+                src="/img/Gibson-2.webp"
+                alt="Imagen Instrumento"
+                style="width: 100%"
+              />
+            </div>
+            <div class="column">
+              <img
+                src="/img/Gibson-3.webp"
+                alt="Imagen Instrumento"
+                style="width: 100%"
+              />
+            </div>
+            <div class="column">
+              <img
+                src="/img/Gibson-4.webp"
+                alt="Imagen Instrumento"
+                style="width: 100%"
+              />
+            </div>
+            <div class="column">
+              <img
+                src="/img/Gibson-5.webp"
+                alt="Imagen Instrumento"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+        </div>
+        <!--Text Description-->
+        <div class="product-description">
+          <h4>
+            La Gibson Les Paul ™ Classic combina el modelo Les Paul de principios de los 60 con algunas modificaciones funcionales y probadas por el tiempo. Como era de esperar, la LP Classic está elaborada con un fondo de caoba y una tapa de arce junto con un cuello de caoba delgado y cónico y un diapasón de palisandro. Los microfonos de bobina abierta BurstBucker ™ 61R y 61T zebra brindan tonos Gibson clásicos de la época con un poco de fuerza adicional gracias a las bobinas abiertas. El conjunto de control cuenta con 4 potenciómetros push-pull que ofrecen opciones de bobina, conmutación de fase y derivación pura para una variedad sónica funcional y versátil.
+
+- Origen: U.S.A.
+- El producto es 100% Original y auténtico GIBSON.
+
+TODOS NUESTROS PRODUCTOS SON ORIGINALES Y POSEEN GARANTÍA OFICIAL DEL FABRICANTE
+
+Envío a todo el País ¡Despacho rápido y seguro!
+
+Realizá todas las consultas necesarias antes de realizar la COMPRA, estamos para ayudarte!
+          </h4>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-column">
+        <!-- Product Description -->
+        <div class="product-description">
+          <h1>Gibson Les Paul</h1>
+        </div>
+
+        <!-- Product Configuration -->
+        <div class="product-configuration">
+          <form action="productDescription.html" method="POST">
+          <div class="radio-buttons">
+            
+            <label for="always">Con funda</label>
+            <input type="radio" name="funda" id="con-funda" value="con-funda" checked/>
+            
+            
+            <label for="never">Sin Funda</label>
+            <input type="radio" name="funda" id="con-funda" value="con-funda"/>
+            </label>
+          </div>
+            <div class="radio-buttons">
+              <label for="always">Con garantía</label>
+            <input type="radio" name="garantia" id="con-garantia" value="con-garantia" checked/>
+            
+            <label for="never">Sin garantía</label>
+            <input type="radio" name="garantia" id="sin-garantía" value="sin-garantía"/>
+            
+            </label>
+          </div>
+                    
+    </form>
+        </div>
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <div >
+            <img class="mercadopago-img" src="https://www.blackmusic.com.ar/img/mediospago.jpg?v=1630076275" alt="Mercadopago">
+          </div>
+          <div class="precio">
+          <h2>$100,000</h2>
+        </div>
+        <div class="buttons">
+          <div>
+            <button class="buy-btn">Agregar al carrito</button>
+          </div>
+              <div><button class="wishlist-btn">
+                Agregar a Favoritos </button></div>
+            </div>
+        </div>
+    </main>
+
+        <!--INICIO DEL FOOTER-->
+        <%- include('./partials/footer') %>
+        <!--FIN DEL FOOTER-->
+        
+  </body>
+</html>

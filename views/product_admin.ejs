@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/product_admin.css">  
+    <title>Administración de Productos</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+  </head>
+  <body>
+    <div class="grid-container">
+    <div class="rows-3">
+      <!--INICIO DEL HEADER-->
+      <%- include('./partials/header') %>
+      <!--FIN DEL HEADER-->
+    </div>
+      <div class="column-3">2</div>
+      <div class="column-3">
+          <div class="testbox">
+            <form action="/">
+              <div class="banner">
+                <h1>Administración de productos</h1>
+              </div>
+
+              <div class="item">
+                <!-- <p>Productos</p> -->
+                <div class="multiple-items">
+                  <div>
+                    <p>Product ID</p>
+                    <input type="number" name="productId" placeholder="0000000" disabled>
+                  </div>
+                  <div>
+                    <p>Nombre</p>
+                    <input type="text" name="name" placeholder="Nombre">
+                  </div>
+                  <div class="item">
+                    <p>Precio</p>
+                    <input type="number" name="precio" placeholder="$ 0.00">
+                  </div>
+                  <div class="item">
+                    <p>Cantidad</p>
+                    <input type="number" name="cantidad" placeholder="0" min="0" max="10">
+                  </div>                   
+                </div>
+                <div class="item">
+                  <p>Descripción</p>
+                  <textarea rows="3" placeholder="Incluya la descripción general del producto"></textarea>
+                </div>          
+                <div class="item">
+                  <p>Imagen asociada</p>
+                  <!-- <input type="email" name="email"/> -->
+                  <!-- <input type="file" id="img" name="img" accept="image/*"> -->
+                  <input type="file" accept="image/*">
+                </div>                
+                <div class="item">
+                  <p>Categoría</p>
+                  <select required>
+                    <option value="undefined">Seleccione una categoría</option>
+                    <option value="guitarra">Guitarra</option>
+                    <option value="bajo">Bajo</option>
+                    <option value="teclado">Teclado</option>
+                    <option value="audio">Audio</option>
+                    <option value="bateria">Bateria</option>                    
+                    <option value="accesorios">Accesorios</option>
+                  </select>
+                </div>
+                <div class="item">
+                  <p>Medidas</p>
+                  <div class="dimensions"> 
+                    <select required>
+                      <option value="cm">Centimetros</option>
+                      <option value="inch">Pugadas</option>
+                      <option value="metro">Metro</option>
+                    </select>                            
+                    <input type="text" name="alto" placeholder="Alto">
+                    <input type="text" name="ancho" placeholder="Anchoe">
+                    <input type="text" name="profundiad" placeholder="Profundidad">
+                  </div>
+                </div>
+                <div class="item">
+                  <p>Color principal</p>
+                  <div class="multiple-items">             
+                    <div>
+                        <label for="silver">Silver </label>   
+                        <input type="checkbox" id="silver" value="silver">                                         
+                    </div>
+                    <div>
+                      <label for="gold">Gold</label>                    
+                      <input type="checkbox" id="gold" value="gold">                    
+                    </div>
+                    <div>
+                      <label for="azul">Azul</label>
+                      <input type="checkbox" id="azul" value="azul">                    
+                    </div>
+                    <div>
+                      <label for="rojo">Rojo</label>                    
+                      <input type="checkbox" id="rojo" value="rojo">                    
+                    </div>
+                    <div>
+                      <label for="amarillo">Amarillo</label>
+                      <input type="checkbox" id="amarillo" value="amarillo">
+                    </div>
+                    <div>
+                      <label for="verde">Verde</label>
+                      <input type="checkbox" id="verde" value="verde">                    
+                    </div>
+                    <div>
+                      <label for="rosa">Rosa</label>
+                      <input type="checkbox" id="rosa" value="rosa">                    
+                    </div>
+                    <div>
+                      <label for="blanco">Blanco</label>
+                      <input type="checkbox" id="blanco" value="blanco">                    
+                    </div>
+                    <div>
+                      <label for="negro">Negro</label>
+                      <input type="checkbox" id="negro" value="negro">
+                    </div>
+                  </div>
+                </div>                  
+              </div>
+              <!-- <div class="item">
+                <p>Precio</p>
+                <input type="number" name="precio" placeholder="$ 0.00">
+              </div>
+              <div class="item">
+                <p>Cantidad</p>
+                <input type="number" name="cantidad" placeholder="0" min="0" max="10">
+              </div> -->
+              <!-- <div class="item"> -->
+                <div class="multiple-items">
+                  <button type="submit" href="/">GUARDAR</button>                
+                  <button type="cancel" href="/">CANCELAR</button>
+                </div>
+              <!-- </div> -->
+            </form>
+          </div>
+      </div>
+      <div class="">4</div>
+      <div class="">5</div>
+      <div class="">6</div>  
+      <div class="rows-3">
+        <!--INICIO DEL FOOTER-->
+        <%- include('./partials/footer') %>
+        <!--FIN DEL FOOTER-->
+      </div>
+    </div>
+  </body>
+  </html>

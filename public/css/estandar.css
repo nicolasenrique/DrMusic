@@ -1,0 +1,47 @@
+/*HTML*/
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+} 
+
+/*BODY*/
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #F2EDE4;
+}
+
+/*HEADER*/
+colores-header {
+    background-color:#BF1304 ;  
+    color: #f2EDE4 
+}
+
+/*FOOTER*/
+colores-footer {
+    background-color: #0d0d0d;
+    color:#F2EDE4;
+}
+iconos-footer {
+    background-color: #bf1304;
+    margin: 0px;
+    border-radius: 5px;
+    color: #F2EDE4;
+    padding: 5%;
+}
+/*BUTTOMS*/
+buttoms {
+    background-color: #BF1304;
+    text-align: center;
+    border: none;
+    color:#F2EDE4;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/*TEXTOS*/
+textos-rojos {
+    color: #BF1304
+}
+textos-grises {
+    color: rgb(73, 70, 70);
+}

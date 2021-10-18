@@ -1,0 +1,5 @@
+[{"id":"001","nombre":"Fender Stratocaster","precio":"$240.000","descuento":"40% off","foto":"img/mas-vendido-1.jpg"},
+ {"id":"002","nombre":"Yamaha C-40","precio":"$34.000","descuento":"10% off","foto":"img/mas-vendido-2.jpg"},
+ {"id":"003","nombre":"Amplificador Marshall MG30FX","precio":"$41.000","descuento":"30% off","foto":"img/mas-vendido-3.jpg"},
+ {"id":"004","nombre":"Gibson Les Paul","precio":"$410.000","descuento":"30% off","foto":"img/mas-vendido-4.jpg"}   
+]
