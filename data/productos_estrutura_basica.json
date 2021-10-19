@@ -1,0 +1,17 @@
+[ 
+ {
+  "prodId": 0,
+  "nombre": "string",
+  "descripcion": "string",
+  "precio": 0,
+  "imagen": "string",  
+  "categoria": "string",
+  "medidas" : "string",
+  "alto" : 0,
+  "ancho" : 0,
+  "profundidad" : 0,
+  "Color": "string",
+  "fechaCreacion": "YYYY-MM-DD",
+  "fechaModificacion": "YYYY-MM-DD"
+  }
+]
