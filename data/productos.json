@@ -1,17 +1,32 @@
-[ 
- {
-  "prodId": 1,
-  "nombre": "Bajo TRBX",
-  "descripcion": "Bajo TRBX",
-  "precio": 79000,
-  "imagen": "bajo-electrico-trbx-174-azulmetallic-blue.jpg",  
-  "categoria": "bajo",
-  "medidas" : "cm",
-  "alto" : 110,
-  "ancho" :36,
-  "profundidad" : 9,
-  "Color": "azul",
-  "fechaCreacion": "2021-06-15",
-  "fechaModificacion": null
+[
+  {
+    "prodId": 1,
+    "nombre": "Bajo TRBX",
+    "descripcion": "Bajo TRBX",
+    "precio": 79000,
+    "imagen": "bajo-electrico-trbx-174-azulmetallic-blue.jpg",
+    "categoria": "bajo",
+    "medidas": "cm",
+    "alto": 110,
+    "ancho": 36,
+    "profundidad": 9,
+    "Color": "azul",
+    "fechaCreacion": "2021-06-15",
+    "fechaModificacion": null
+  },
+  {
+    "prodId": 2,
+    "nombre": "Teclado musical Yamaha PSR-E273 61",
+    "descripcion": "Con 384 tonos y 143 ritmos.",
+    "precio": "30135",
+    "imagen": "img-1634842109418.jpg",
+    "categoria": "teclado",
+    "medidas": "cm",
+    "alto": "16",
+    "ancho": "127",
+    "profundidad": "42",
+    "color": "negro",
+    "fechaCreacion": "Thu Oct 21 2021 15:48:29 GMT-0300 (hora estándar de Argentina)",
+    "fechaModificacion": null
   }
 ]
