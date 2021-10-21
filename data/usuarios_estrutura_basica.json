@@ -1,0 +1,17 @@
+[ 
+ {
+  "userId": 0,
+  "firstName": "string",
+  "lastName": "string",
+  "email": "string",
+  "telCelular": "string",
+  "telAlternativo": "string",
+  "clave" : "string"
+  "rol" : "string",
+  "estado" : "string",
+  "avatar" : "string",
+  "fechaCreacion": "YYYY-MM-DD",
+  "fechaModificacion": "YYYY-MM-DD",
+  "fechaUltimoLogin" : "YYYY-MM-DD"
+  }
+]

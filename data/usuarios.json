@@ -1,0 +1,17 @@
+[ 
+ {
+  "userId": 0,
+  "firstName": "admin",
+  "lastName": "admin",
+  "email": "admin@drmusic.com",
+  "telCelular": null,
+  "telAlternativo": null,
+  "clave" : "1234"
+  "rol" : "admin",
+  "estado" : "activo",
+  "avatar" : "default.png",
+  "fechaCreacion": "2021-06-01",
+  "fechaModificacion": null,
+  "fechaUltimoLogin" : null
+  }
+]
