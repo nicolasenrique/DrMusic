@@ -14,7 +14,7 @@ app.use("/products", productsRouter);
 app.use("/carrito", carritoRouter);
 
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("Server 3000 running");
 });
 
