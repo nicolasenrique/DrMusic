@@ -37,6 +37,7 @@ const controlProducts = {
         //console.log(prodToCreate);
         let productsJSON = JSON.stringify(products, null, 2);
         fs.writeFileSync(path.join(__dirname, '../data/productos.json'),productsJSON); 
+        res.redirect('/products/admin');
       } 
 }
 
