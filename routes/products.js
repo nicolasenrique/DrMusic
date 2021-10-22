@@ -20,7 +20,7 @@ var upload = multer({ storage: storage });
 
 router.get("/list", productsController.list); // Sugerencia Nico router.get("/", productsController.list);
 router.get("/description/:id/", productsController.detail);
-router.get("/admin", productsController.admin);
-router.post("/admin", upload.single("img"), productsController.store);
+router.get("/create", productsController.create);
+router.post("/create", upload.single("img"), productsController.store);
 
 module.exports = router;

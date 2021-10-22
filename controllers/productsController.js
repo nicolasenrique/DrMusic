@@ -17,8 +17,8 @@ const controlProducts = {
     let selectedProduct = products[idProducto];
     res.render("productDescription", { selectedProduct });
   },
-     admin: function(req,res){
-        res.render('product_admin');
+     create: function(req,res){
+        res.render('product_create');
     },
     store: function(req,res){
         let prodToCreate = {};
@@ -43,7 +43,7 @@ const controlProducts = {
         //console.log(prodToCreate);
         let productsJSON = JSON.stringify(products, null, 2);
         fs.writeFileSync(path.join(__dirname, '../data/productos.json'),productsJSON); 
-        res.redirect('/products/admin');
+        res.redirect('/products/list');
       } 
 }
 
