@@ -9,7 +9,7 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
   </head>
-  <body>
+ <body>
     <div class="grid-container">
     <div class="rows-3">
       <!--INICIO DEL HEADER-->
@@ -19,7 +19,7 @@
       <div class="column-3">2</div>
       <div class="column-3">
           <div class="testbox">
-            <form action="/">
+            <form action="/products/admin" method="POST" enctype="multipart/form-data">
               <div class="banner">
                 <h1>Administración de productos</h1>
               </div>
@@ -33,7 +33,7 @@
                   </div>
                   <div>
                     <p>Nombre</p>
-                    <input type="text" name="name" placeholder="Nombre">
+                    <input type="text" id ="name" name="name" placeholder="Nombre"><br>
                   </div>
                   <div class="item">
                     <p>Precio</p>
@@ -46,17 +46,17 @@
                 </div>
                 <div class="item">
                   <p>Descripción</p>
-                  <textarea rows="3" placeholder="Incluya la descripción general del producto"></textarea>
+                  <textarea name="descripcion"rows="3" placeholder="Incluya la descripción general del producto"></textarea>
                 </div>          
                 <div class="item">
                   <p>Imagen asociada</p>
                   <!-- <input type="email" name="email"/> -->
                   <!-- <input type="file" id="img" name="img" accept="image/*"> -->
-                  <input type="file" accept="image/*">
+                  <input type="file" name="img" accept="image/*">
                 </div>                
                 <div class="item">
                   <p>Categoría</p>
-                  <select required>
+                  <select name="categoria" required>
                     <option value="undefined">Seleccione una categoría</option>
                     <option value="guitarra">Guitarra</option>
                     <option value="bajo">Bajo</option>
@@ -69,14 +69,14 @@
                 <div class="item">
                   <p>Medidas</p>
                   <div class="dimensions"> 
-                    <select required>
+                    <select name="medidas" required>
                       <option value="cm">Centimetros</option>
                       <option value="inch">Pugadas</option>
                       <option value="metro">Metro</option>
                     </select>                            
-                    <input type="text" name="alto" placeholder="Alto">
-                    <input type="text" name="ancho" placeholder="Anchoe">
-                    <input type="text" name="profundiad" placeholder="Profundidad">
+                    <input type="number" name="alto" placeholder="Alto">
+                    <input type="number" name="ancho" placeholder="Ancho">
+                    <input type="number" name="profundidad" placeholder="Profundidad">
                   </div>
                 </div>
                 <div class="item">
@@ -84,39 +84,39 @@
                   <div class="multiple-items">             
                     <div>
                         <label for="silver">Silver </label>   
-                        <input type="checkbox" id="silver" value="silver">                                         
+                        <input type="radio" name="color" id="silver" value="silver">                                         
                     </div>
                     <div>
                       <label for="gold">Gold</label>                    
-                      <input type="checkbox" id="gold" value="gold">                    
+                      <input type="radio" name="color" id="gold" value="gold">                    
                     </div>
                     <div>
                       <label for="azul">Azul</label>
-                      <input type="checkbox" id="azul" value="azul">                    
+                      <input type="radio" name="color" id="azul" value="azul">                    
                     </div>
                     <div>
                       <label for="rojo">Rojo</label>                    
-                      <input type="checkbox" id="rojo" value="rojo">                    
+                      <input type="radio" name="color" id="rojo" value="rojo">                    
                     </div>
                     <div>
                       <label for="amarillo">Amarillo</label>
-                      <input type="checkbox" id="amarillo" value="amarillo">
+                      <input type="radio" name="color" id="amarillo" value="amarillo">
                     </div>
                     <div>
                       <label for="verde">Verde</label>
-                      <input type="checkbox" id="verde" value="verde">                    
+                      <input type="radio" name="color" id="verde" value="verde">                    
                     </div>
                     <div>
                       <label for="rosa">Rosa</label>
-                      <input type="checkbox" id="rosa" value="rosa">                    
+                      <input type="radio" name="color" id="rosa" value="rosa">                    
                     </div>
                     <div>
                       <label for="blanco">Blanco</label>
-                      <input type="checkbox" id="blanco" value="blanco">                    
+                      <input type="radio" name="color" id="blanco" value="blanco">                    
                     </div>
                     <div>
                       <label for="negro">Negro</label>
-                      <input type="checkbox" id="negro" value="negro">
+                      <input type="radio" name="color" id="negro" value="negro">
                     </div>
                   </div>
                 </div>                  
@@ -131,7 +131,7 @@
               </div> -->
               <!-- <div class="item"> -->
                 <div class="multiple-items">
-                  <button type="submit" href="/">GUARDAR</button>                
+                  <button type="submit" >GUARDAR</button>                
                   <button type="cancel" href="/">CANCELAR</button>
                 </div>
               <!-- </div> -->
@@ -146,6 +146,6 @@
         <%- include('./partials/footer') %>
         <!--FIN DEL FOOTER-->
       </div>
-    </div>
-  </body>
+    </div> 
+  </body> 
   </html>
