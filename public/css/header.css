@@ -61,6 +61,22 @@
   text-align: right;
 }
 
+.hamburguer-button.isactive .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer-button.isactive .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.hamburguer-button.isactive .line:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+.main-navbar.active {
+  display: block;
+  animation: fade 0.5s;
+}
+
 /* .hamburguer-button {
     display: none;
   }  */

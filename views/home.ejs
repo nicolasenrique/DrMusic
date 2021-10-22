@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
- 
+
     <link rel="stylesheet" href="./css/style-home.css" />
     <title>Bienvenido a Dr Music</title>
   </head>
@@ -27,7 +27,7 @@
       </div>
 
       <section class="cuerpo-home">
-        <a class=link href="/products/list"
+        <a class="link" href="/products/list"
           ><div class="ir-tienda">Ir a Tienda</div></a
         >
         <!-- Slideshow container -->
@@ -36,6 +36,16 @@
           <img class="mySlides" src="img/d-banner-66.jpeg" />
           <img class="mySlides" src="img/d-banner-64.jpeg" />
         </div>
+
+        <script>
+          let hamburger = document.querySelector(".hamburguer-button");
+          let menu = document.querySelector(".main-navbar");
+
+          hamburger.addEventListener("click", function () {
+            hamburger.classList.toggle("isactive");
+            menu.classList.toggle("active");
+          });
+        </script>
 
         <!-- Script para Slideshow -->
         <script>
@@ -73,6 +83,7 @@
               src="<%= productos[0].foto %>"
               alt="mas-vendido-1"
             />
+
             <div class="article-data">
               <p class="precio"><%= productos[0].precio %></p>
               <p class="descuento"><%= productos[0].descuento %></p>

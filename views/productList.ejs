@@ -97,154 +97,27 @@
       <!-- LEFT COLUMN -->
       <div class="right-column">
         <div class="productos">
-          <div class="fila-productos">
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$6.770</h3>
-                <h3 class="descuento">40% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
-
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$230.000</h3>
-                <h3 class="descuento">20% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
-
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$70.500</h3>
-                <h3 class="descuento">10% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
-
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$23.200</h3>
-                <h3 class="descuento">5% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
-          </div>
-          <div class="fila-productos">
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$6.770</h3>
-                <h3 class="descuento">40% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
-
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$230.000</h3>
-                <h3 class="descuento">20% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
-
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$70.500</h3>
-                <h3 class="descuento">10% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
-
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$23.200</h3>
-                <h3 class="descuento">5% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
-          </div>
+          <% for (let i = 0 ; i < products.length ; i++) { %>
 
           <div class="fila-productos">
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
+            <a href="description/<%=products[i].prodId %>"><article class="product">
+              <img src="/img/products/<%= products[i].imagen %>" alt="producto" />
               <div class="cart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
               <div class="precio-descuento">
-                <h3 class="precio">$6.770</h3>
-                <h3 class="descuento">40% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
+                <h3 class="precio">$<%= products[i].precio %></h3>
 
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
+                <h3 class="nombre"><%= products[i].nombre %></h3>
               </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$230.000</h3>
-                <h3 class="descuento">20% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
             </article>
-
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$70.500</h3>
-                <h3 class="descuento">10% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
-
-            <article class="product">
-              <img src="/img/Gibson-1.webp" alt="producto" />
-              <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <div class="precio-descuento">
-                <h3 class="precio">$23.200</h3>
-                <h3 class="descuento">5% off</h3>
-              </div>
-              <h3 class="descripcion">Gibson Les Paul</h3>
-            </article>
+            <div>
+              <h3 class="descripcion"><%= products[i].descripcion %></h3>
+            </div>
           </div>
+          
+        </a>
+          <% } %>
         </div>
       </div>
 

@@ -27,7 +27,30 @@ body {
   display: flex;
   width: 100%;
   object-fit: contain;
-  padding-bottom: 5%;
+}
+
+.ir-tienda {
+  background-color: #590f08;
+  border: solid 3px #f2ede4;
+  border-radius: 5px;
+  padding: 4px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+}
+.link {
+  text-decoration: none;
+  color: #f2ede4;
+}
+.ir-tienda:hover {
+  transition: 450ms;
+  background-color: #ce5b50;
+}
+
+.ir-tienda a {
+  color: #f2ede4;
+  text-decoration: none;
 }
 
 /* ROW */
@@ -42,6 +65,10 @@ body {
 }
 .right-column {
   flex: 90%;
+}
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
 }
 
 /* ESTILOS HEADER */
@@ -127,13 +154,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
 }
-.descuento {
+.nombre {
   color: #39b54a;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  width: 70%;
 }
 .precio {
   display: flex;
@@ -141,22 +171,24 @@ body {
 
 .precio-descuento {
   display: flex;
+  flex-direction: column;
 }
 
 .product {
   padding: 0 15px;
   position: relative;
-  margin: 30px 15px;
+  text-align: center;
 }
 
 .descripcion {
   display: none;
 }
-article.product:hover .descripcion {
-  display: block;
+.fila-productos:hover .descripcion {
+  display: inline-block;
+  position: relative;
   transition: 450ms;
 }
-article.product:hover {
+.fila-productos:hover {
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
   transition: 450ms;
 }
@@ -178,8 +210,7 @@ article.product:hover .fa-shopping-cart {
 }
 
 .fila-productos img {
-  width: 100%;
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  width: 60%;
 }
 .product h2 {
   background-color: rgba(0, 0, 0, 0.7);
@@ -281,11 +312,32 @@ footer {
 /* Responsive */
 /*Laptop*/
 @media (min-width: 768px) {
+  .productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
   .fila-productos {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    width: 33%;
+    align-items: flex-end;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
   }
+
+  .fila-productos img {
+    max-width: 150px;
+    max-height: 284px;
+    width: 100%;
+  }
+
   /*List*/
   .row {
     display: flex;

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/css/Productdetail-styles.css"/>
-    <title>Descripción del Producto</title>
+    <title> </title>
   </head>
   <body>
 
@@ -22,11 +22,11 @@
           <!--Main Picture-->
           <img
             class="product-img"
-            src="/img/Gibson-1.webp"
+            src="/img/products/<%= selectedProduct.imagen %>"
             alt="Guitar"
           />
           <!--Row Picture-->
-          <div class="product-img-row">
+          <!-- <div class="product-img-row">
             <div class="column">
               <img
                 src="/img/Gibson-2.webp"
@@ -55,21 +55,12 @@
                 style="width: 100%"
               />
             </div>
-          </div>
+          </div> -->
         </div>
         <!--Text Description-->
         <div class="product-description">
           <h4>
-            La Gibson Les Paul ™ Classic combina el modelo Les Paul de principios de los 60 con algunas modificaciones funcionales y probadas por el tiempo. Como era de esperar, la LP Classic está elaborada con un fondo de caoba y una tapa de arce junto con un cuello de caoba delgado y cónico y un diapasón de palisandro. Los microfonos de bobina abierta BurstBucker ™ 61R y 61T zebra brindan tonos Gibson clásicos de la época con un poco de fuerza adicional gracias a las bobinas abiertas. El conjunto de control cuenta con 4 potenciómetros push-pull que ofrecen opciones de bobina, conmutación de fase y derivación pura para una variedad sónica funcional y versátil.
-
-- Origen: U.S.A.
-- El producto es 100% Original y auténtico GIBSON.
-
-TODOS NUESTROS PRODUCTOS SON ORIGINALES Y POSEEN GARANTÍA OFICIAL DEL FABRICANTE
-
-Envío a todo el País ¡Despacho rápido y seguro!
-
-Realizá todas las consultas necesarias antes de realizar la COMPRA, estamos para ayudarte!
+            <%= selectedProduct.descripcion %> 
           </h4>
         </div>
       </div>
@@ -77,8 +68,8 @@ Realizá todas las consultas necesarias antes de realizar la COMPRA, estamos par
       <!-- Right Column -->
       <div class="right-column">
         <!-- Product Description -->
-        <div class="product-description">
-          <h1>Gibson Les Paul</h1>
+        <div class="product-name">
+          <h1><%= selectedProduct.nombre %></h1>
         </div>
 
         <!-- Product Configuration -->
@@ -113,7 +104,7 @@ Realizá todas las consultas necesarias antes de realizar la COMPRA, estamos par
             <img class="mercadopago-img" src="https://www.blackmusic.com.ar/img/mediospago.jpg?v=1630076275" alt="Mercadopago">
           </div>
           <div class="precio">
-          <h2>$100,000</h2>
+          <h2><%=selectedProduct.precio%></h2>
         </div>
         <div class="buttons">
           <div>
