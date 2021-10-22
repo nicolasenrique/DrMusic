@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 
@@ -18,27 +17,7 @@ const controlProducts = {
     let selectedProduct = products[idProducto];
     res.render("productDescription", { selectedProduct });
   },
-  admin: function (req, res) {
-    res.render("product_admin");
-  },
-};
-
-module.exports = controlProducts;
-=======
-const fs = require('fs');
-const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-const controlProducts = {
-    list: function(req,res){
-        res.render('productList');        
-    },
-    detail: function(req,res){
-        res.render('productDescription');        
-    },
-    admin: function(req,res){
+     admin: function(req,res){
         res.render('product_admin');
     },
     store: function(req,res){
@@ -69,4 +48,3 @@ const controlProducts = {
 }
 
 module.exports = controlProducts;
->>>>>>> d41a29842ace4da823079c71c5e9e1ccaa8d46b1

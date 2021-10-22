@@ -165,7 +165,6 @@
     "fechaModificacion": null
   },
   {
-<<<<<<< HEAD
     "prodId": 12,
     "nombre": "Teclado Yamaha PSR-E360 61 teclas",
     "descripcion": "Color Arce",
@@ -223,20 +222,20 @@
     "profundidad": 9,
     "Color": "azul",
     "fechaCreacion": "2021-06-15",
-=======
-    "prodId": 2,
-    "nombre": "Teclado musical Yamaha PSR-E273 61",
-    "descripcion": "Con 384 tonos y 143 ritmos.",
-    "precio": "30135",
-    "imagen": "img-1634842109418.jpg",
-    "categoria": "teclado",
+    "fechaModificacion": null
+  },
+  {
+    "prodId": 16,
+    "nombre": "",
+    "descripcion": "",
+    "precio": "",
+    "imagen": "default-img.png",
+    "categoria": "undefined",
     "medidas": "cm",
-    "alto": "16",
-    "ancho": "127",
-    "profundidad": "42",
-    "color": "negro",
-    "fechaCreacion": "Thu Oct 21 2021 15:48:29 GMT-0300 (hora estándar de Argentina)",
->>>>>>> d41a29842ace4da823079c71c5e9e1ccaa8d46b1
+    "alto": "",
+    "ancho": "",
+    "profundidad": "",
+    "fechaCreacion": "Fri Oct 22 2021 11:17:17 GMT-0300 (hora estándar de Argentina)",
     "fechaModificacion": null
   }
 ]
