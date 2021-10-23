@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/product_admin.css">  
+    <title>Administración de Productos</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+  </head>
+ <body>
+    <div class="grid-container">
+    <div class="rows-3">
+      <!--INICIO DEL HEADER-->
+      <%- include('./partials/header') %>
+      <!--FIN DEL HEADER-->
+    </div>
+      <div class="column-3">2</div>
+      <div class="column-3">
+          <div class="testbox">
+            <form action="/products/update?_method=PUT" method="POST" enctype="multipart/form-data">
+              <div class="banner">
+                <h1>Edición de productos</h1>
+              </div>
+
+              <div class="item">
+                <!-- <p>Productos</p> -->
+                <div class="multiple-items">
+                  <div>
+                    <p>Product ID</p>
+                    <input type="number" name="idVisible" placeholder="0000000"  value=<%= product.prodId %> disabled>  
+                    <input type="hidden"  name="prodId" value=<%= product.prodId %> >
+                  </div>
+                  <div>
+                    <p>Nombre</p>
+                    <input type="text" id ="name" name="nombre" placeholder="Nombre" value=<%= product.nombre %>><br>
+                  </div>
+                  <div class="item">
+                    <p>Precio</p>
+                    <input type="number" name="precio" placeholder="$ 0.00" value=<%= product.precio %>>
+                  </div>
+                  <div class="item">
+                    <p>Cantidad</p>
+                    <input type="number" name="cantidad" placeholder="0" min="0" max="10" disabled>
+                  </div>                   
+                </div>
+                <div class="item">
+                  <p>Descripción</p>
+                  <textarea name="descripcion"rows="3" placeholder="Incluya la descripción general del producto"> <%= product.descripcion %> </textarea>
+                </div>          
+                <div class="item">
+                  <p>Imagen asociada</p>
+                  <!-- <input type="email" name="email"/> -->
+                  <!-- <input type="file" id="img" name="img" accept="image/*"> -->
+                  <input type="file" name="imagen" accept="image/*">
+                </div>                
+                <div class="item">
+                  <p>Categoría</p>
+                  <select name="categoria" required>
+                    <option value="undefined">Seleccione una categoría</option>
+                    <option value="guitarra" <%= product.categoria  == 'guitarra' ? 'selected' : ''%>>Guitarra</option>
+                    <option value="bajo"  <%= product.categoria  == 'bajo' ? 'selected' : ''%>>Bajo</option>
+                    <option value="teclado" <%= product.categoria  == 'teclado' ? 'selected' : ''%>>Teclado</option>
+                    <option value="audio" <%= product.categoria  == 'audio' ? 'selected' : ''%>>Audio</option>
+                    <option value="bateria" <%= product.categoria  == 'bateria' ? 'selected' : ''%>>Bateria</option>                    
+                    <option value="accesorios" <%= product.categoria  == 'accesorios' ? 'selected' : ''%>>Accesorios</option>
+                  </select>
+                </div>
+                <div class="item">
+                  <p>Medidas</p>
+                  <div class="dimensions"> 
+                    <select name="medidas" required>
+                      <option value="cm" <%= product.medidas  == 'cm' ? 'selected' : ''%>>Centimetros</option>
+                      <option value="inch" <%= product.medidas  == 'inch' ? 'selected' : ''%>>Pugadas</option>
+                      <option value="metro" <%= product.medidas  == 'metro' ? 'selected' : ''%>>Metro</option>
+                    </select>                            
+                    <input type="number" name="alto" placeholder="Alto" value=<%= product.alto %>>
+                    <input type="number" name="ancho" placeholder="Ancho" value=<%= product.ancho %>>
+                    <input type="number" name="profundidad" placeholder="Profundidad" value=<%= product.profundidad %>>
+                  </div>
+                </div>
+                <div class="item">
+                  <p>Color principal</p>
+                  <div class="multiple-items">       
+                    <div>
+                        <label for="silver">Silver </label>   
+                        <input type="radio" name="color" id="silver" value="silver" <%= product.color  == 'silver' ? 'checked' : ''%>>                                         
+                    </div>
+                    <div>
+                      <label for="gold">Gold</label>                    
+                      <input type="radio" name="color" id="gold" value="gold" <%= product.color  == 'gold' ? 'checked' : ''%>>                      
+                    </div>
+                    <div>
+                      <label for="azul">Azul</label>
+                      <input type="radio" name="color" id="azul" value="azul" <%= product.color  == 'azul' ? 'checked' : ''%>>                       
+                    </div>
+                    <div>
+                      <label for="rojo">Rojo</label>                    
+                      <input type="radio" name="color" id="rojo" value="rojo" <%= product.color  == 'rojo' ? 'checked' : ''%>>                       
+                    </div>
+                    <div>
+                      <label for="amarillo">Amarillo</label>
+                      <input type="radio" name="color" id="amarillo" value="amarillo" <%= product.color  == 'amarillo' ? 'checked' : ''%>>   
+                    </div>
+                    <div>
+                      <label for="verde">Verde</label>
+                      <input type="radio" name="color" id="verde" value="verde" <%= product.color  == 'verde' ? 'checked' : ''%>>                       
+                    </div>
+                    <div>
+                      <label for="rosa">Rosa</label>
+                      <input type="radio" name="color" id="rosa" value="rosa" <%= product.color  == 'rosa' ? 'checked' : ''%>>                       
+                    </div>
+                    <div>
+                      <label for="blanco">Blanco</label>
+                      <input type="radio" name="color" id="blanco" value="blanco" <%= product.color  == 'blanco' ? 'checked' : ''%>>                       
+                    </div>
+                    <div>
+                      <label for="negro">Negro</label>
+                      <input type="radio" name="color" id="negro" value="negro" <%= product.color  == 'negro' ? 'checked' : ''%>>   
+                    </div>
+                  </div>
+                </div>                  
+              </div>
+              <!-- <div class="item">
+                <p>Precio</p>
+                <input type="number" name="precio" placeholder="$ 0.00">
+              </div>
+              <div class="item">
+                <p>Cantidad</p>
+                <input type="number" name="cantidad" placeholder="0" min="0" max="10">
+              </div> -->
+              <!-- <div class="item"> -->
+                <div class="multiple-items">
+                  <button type="submit" >GUARDAR</button>
+                  <form action="/products/<%= product.prodId %>/delete?_method=DELETE" method="POST" >
+                      <button type="submit" >BORRAR</button>
+                  </form>                
+                  <button type="cancel" href="/">CANCELAR</button>
+                </div>
+              <!-- </div> -->
+            </form>
+          </div>
+      </div>
+      <div class="">4</div>
+      <div class="">5</div>
+      <div class="">6</div>  
+      <div class="rows-3">
+        <!--INICIO DEL FOOTER-->
+        <%- include('./partials/footer') %>
+        <!--FIN DEL FOOTER-->
+      </div>
+    </div> 
+  </body> 
+  </html>

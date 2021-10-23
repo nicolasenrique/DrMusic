@@ -10,7 +10,7 @@
   "alto" : 0,
   "ancho" : 0,
   "profundidad" : 0,
-  "Color": "string",
+  "color": "string",
   "fechaCreacion": "YYYY-MM-DD",
   "fechaModificacion": "YYYY-MM-DD"
   }
