@@ -28,7 +28,7 @@
     </div>
     <div class="row">
       <!-- RIGHT COLUMN -->
-      <div class="left-column">
+      <div class="left-column-list">
         <div class="results">
           <h3 class="results">Resultados</h3>
         </div>
@@ -100,7 +100,7 @@
           <% for (let i = 0 ; i < products.length ; i++) { %>
 
           <div class="fila-productos">
-            <a href="description/<%=products[i].prodId %>"><article class="product">
+            <a href="<%=products[i].prodId %>"><article class="product">
               <img src="/img/products/<%= products[i].imagen %>" alt="producto" />
               <div class="cart">
                 <i class="fas fa-shopping-cart"></i>

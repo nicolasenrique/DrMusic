@@ -59,8 +59,27 @@
         </div>
         <!--Text Description-->
         <div class="product-description">
-          <h4>
+          <h3 class="description-title">
+            Descripción del producto:
+          </h3>
+          <h4> 
             <%= selectedProduct.descripcion %> 
+          </h4>
+          <h3 class="description-title">
+            Dimensiones:
+          </h3>
+          <h4>
+            
+            <%= selectedProduct.alto%> 
+            cm de alto
+          </h4>
+          <h4>
+            <%= selectedProduct.ancho %> 
+            cm de ancho
+          </h4>
+          <h4>
+            <%= selectedProduct.profundidad %> 
+            cm de profundidad
           </h4>
         </div>
       </div>
@@ -112,6 +131,9 @@
           </div>
               <div><button class="wishlist-btn">
                 Agregar a Favoritos </button></div>
+            </div>
+            <div>
+              <a href="/edit/<%=selectedProduct.prodId%>"><button class="edit-btn">Editar</button></a>
             </div>
         </div>
     </main>
