@@ -223,9 +223,9 @@
     "fechaModificacion": null
   },
   {
-    "prodId": 16,
+    "prodId": "16",
     "nombre": "",
-    "descripcion": "",
+    "descripcion": "  ",
     "precio": "",
     "imagen": "default-img.png",
     "categoria": "undefined",
@@ -234,7 +234,7 @@
     "ancho": "",
     "profundidad": "",
     "fechaCreacion": "Fri Oct 22 2021 11:17:17 GMT-0300 (hora estándar de Argentina)",
-    "fechaModificacion": null
+    "fechaModificacion": "2021-10-24T13:14:58.096Z"
   },
   {
     "prodId": 17,
