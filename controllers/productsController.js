@@ -13,20 +13,29 @@ function grabaRegistros (products) {
 }
 
 // Show all products
-const controlProducts = {
+const controlProducts = {  
   list: function (req, res) {
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     res.render("productList", { products });
   },
   // Shows one product
 detail: function (req, res) {
-    let idProducto = req.params.id - 1;
-    let selectedProduct = products[idProducto];
-    res.render("productDescription", { selectedProduct });
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let product;
+    for (prod of products) {
+        if (prod.prodId == req.params.id){                
+            product = prod;
+            break;
+        }
+    };
+    res.render("productDescription", { selectedProduct : product });   
 },
 create: function(req,res){
+    console.log('estoy en el CREATE');
     res.render('product_create');
 },
 store: function(req,res){
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     let prodToCreate = {};
     let img = 'default-img.png';
     if (req.file != undefined){
@@ -53,6 +62,7 @@ store: function(req,res){
 },
     //
     edit: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         let product;
         for (prod of products) {
             if (prod.prodId == req.params.id){                
@@ -65,6 +75,7 @@ store: function(req,res){
     //
     update: (req, res) => {		
         //
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         let prodToUpadate = {};
         for (i=0; i < products.length; i++) {
             //
@@ -96,13 +107,14 @@ store: function(req,res){
     },
     delete: (req, res) => {	
         //
-        let id = req.body.prodId
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        let id = req.params.id;
         let productsNew = products.filter(removeID);
         function removeID(prod) {
-			return prod.id != id;
+			return prod.prodId != id;
 		};
         grabaRegistros(productsNew);
-        res.render("productList", { products });
+        res.redirect('/products/list');
     
     }
 }

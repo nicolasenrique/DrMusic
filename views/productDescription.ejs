@@ -93,7 +93,7 @@
 
         <!-- Product Configuration -->
         <div class="product-configuration">
-          <form action="productDescription.html" method="POST">
+          <form action="" >
           <div class="radio-buttons">
             
             <label for="always">Con funda</label>
@@ -118,7 +118,7 @@
         </div>
 
         <!-- Product Pricing -->
-        <div class="product-price">
+        <!-- <div class="product-price">
           <div >
             <img class="mercadopago-img" src="https://www.blackmusic.com.ar/img/mediospago.jpg?v=1630076275" alt="Mercadopago">
           </div>
@@ -135,7 +135,39 @@
             <div>
               <a href="/products/<%=selectedProduct.prodId%>/edit"><button class="edit-btn">Editar</button></a>
             </div>
-        </div>
+        </div> -->
+        <!-- <form action="/products/<%= selectedProduct.prodId %>/delete?_method=DELETE" method="POST" enctype="multipart/form-data"> -->
+          <div class="product-price">
+              <div>
+                  <img class="mercadopago-img" src="https://www.blackmusic.com.ar/img/mediospago.jpg?v=1630076275" alt="Mercadopago" />
+              </div>
+              <div class="precio">
+                  <h2><%=selectedProduct.precio%></h2>
+              </div>
+              <div class="buttons">
+                  <div>
+                      <button class="buy-btn">Agregar al carrito</button>
+                  </div>
+                  <div>
+                      <button class="wishlist-btn">
+                          Agregar a Favoritos
+                      </button>
+                  </div>
+              </div>
+              <div>
+                  <a href="/products/<%=selectedProduct.prodId%>/edit"><button class="edit-btn">Editar</button></a>
+              </div>
+              <form action="/products/<%= selectedProduct.prodId %>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
+              <div>
+                  <button type="submit" class="buy-btn" >Borrar</button>
+                       <input type="hidden"  name="id" id="id"  value=<%= selectedProduct.prodId%> >
+
+              </div>
+            </form>
+
+              
+          </div>
+      <!-- </form> -->
     </main>
 
         <!--INICIO DEL FOOTER-->
