@@ -19,8 +19,9 @@ const storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 router.get("/list",         productsController.list); // Sugerencia Nico router.get("/", productsController.list);
-router.get("/:id",         productsController.detail);
 router.get("/create",       productsController.create);
+router.get("/:id",          productsController.detail);
+
 router.post("/create",      upload.single("img"), productsController.store);
 router.get('/:id/edit',     productsController.edit);
 router.put('/update',       upload.single('imagen'), productsController.update);
