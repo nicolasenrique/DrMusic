@@ -19,7 +19,7 @@
       <div class="column-3">2</div>
       <div class="column-3">
           <div class="testbox">
-            <form action="/products/update?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form action="/products/admin" method="PUT" enctype="multipart/form-data">
               <div class="banner">
                 <h1>Edición de productos</h1>
               </div>
@@ -29,12 +29,11 @@
                 <div class="multiple-items">
                   <div>
                     <p>Product ID</p>
-                    <input type="number" name="idVisible" placeholder="0000000"  value=<%= product.prodId %> disabled>  
-                    <input type="hidden"  name="prodId" value=<%= product.prodId %> >
+                    <input type="number" name="productId" placeholder="0000000"  value=<%= product.prodId %> disabled>  
                   </div>
                   <div>
                     <p>Nombre</p>
-                    <input type="text" id ="name" name="nombre" placeholder="Nombre" value=<%= product.nombre %>><br>
+                    <input type="text" id ="name" name="name" placeholder="Nombre" value=<%= product.nombre %>><br>
                   </div>
                   <div class="item">
                     <p>Precio</p>
@@ -53,7 +52,7 @@
                   <p>Imagen asociada</p>
                   <!-- <input type="email" name="email"/> -->
                   <!-- <input type="file" id="img" name="img" accept="image/*"> -->
-                  <input type="file" name="imagen" accept="image/*">
+                  <input type="file" name="img" accept="image/*">
                 </div>                
                 <div class="item">
                   <p>Categoría</p>
@@ -132,18 +131,11 @@
               </div> -->
               <!-- <div class="item"> -->
                 <div class="multiple-items">
-                  <button type="submit" >GUARDAR</button>                  
-                  <!-- <form action="/products/update?_method=DELETE" method="POST" enctype="multipart/form-data">
-                      <button type="submit" >BORRAR</button>
-                      <input type="hidden"  name="prodId" value=<%= product.prodId %> >
-                  </form>                 -->
+                  <button type="submit" >GUARDAR</button>                
                   <button type="cancel" href="/">CANCELAR</button>
                 </div>
               <!-- </div> -->
             </form>
-            <div class="multiple-items">
-
-          </div> 
           </div>
       </div>
       <div class="">4</div>
