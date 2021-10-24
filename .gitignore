@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#MacOs files
+
+.DS_Store
+
 #Json files
 
 package-lock.json
