@@ -16,7 +16,7 @@
   {
     "prodId": "2",
     "nombre": "Gibson",
-    "descripcion": " Guitarra 6 cuerdas, color negra ",
+    "descripcion": "  Guitarra 6 cuerdas, color negra  - Bruce Dickinson",
     "precio": "79000",
     "imagen": "imagen-1635030634938.png",
     "categoria": "guitarra",
@@ -25,7 +25,7 @@
     "ancho": "36",
     "profundidad": "9",
     "fechaCreacion": "2021-06-15",
-    "fechaModificacion": "2021-10-23T23:10:34.951Z"
+    "fechaModificacion": "2021-10-24T09:40:11.386Z"
   },
   {
     "prodId": 3,
@@ -234,6 +234,21 @@
     "ancho": "",
     "profundidad": "",
     "fechaCreacion": "Fri Oct 22 2021 11:17:17 GMT-0300 (hora estándar de Argentina)",
+    "fechaModificacion": null
+  },
+  {
+    "prodId": 17,
+    "nombre": "steve harris",
+    "descripcion": "bajista y lider de la banda iron maiden",
+    "precio": "100000",
+    "imagen": "img-1635068343574.png",
+    "categoria": "bajo",
+    "medidas": "cm",
+    "alto": "189",
+    "ancho": "70",
+    "profundidad": "30",
+    "color": "gold",
+    "fechaCreacion": "Sun Oct 24 2021 06:39:03 GMT-0300 (Argentina Standard Time)",
     "fechaModificacion": null
   }
 ]
