@@ -190,6 +190,7 @@ body {
   .novedad-4 {
     width: 25vw;
     margin: 5px;
+    border-radius: 5px;
   }
   .mas-vendidos {
     display: flex;
