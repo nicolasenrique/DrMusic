@@ -22,6 +22,14 @@
     </ul>
 
     <ul class="right-navbar">
+      <% if (locals.isLogged) { %>
+        <li>Hi <%= locals.userLogged.firstName %>!!!!!!</li>
+        <br>
+        <li>
+          <a href="/users/logout">Salir <i class="logout"></i></a>
+        </li>
+        <br>  
+        <% } else { %>  
       <li>
         <!-- <a href="http://localhost:3000/register" -->
         <a href="/users/register"
@@ -33,11 +41,13 @@
         <a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
       </li>
       <li>
+        <% } %> 
         <!-- <a href="http://localhost:3000/carrito" -->
         <a href="/carrito/mostrar"
           >Mi Carrito <i class="fas fa-shopping-basket"></i
         ></a>
       </li>
+   
     </ul>
   </nav>
 </header>

@@ -6,7 +6,7 @@
   "email": "string",
   "telCelular": "string",
   "telAlternativo": "string",
-  "clave" : "string"
+  "password" : "string"
   "rol" : "string",
   "estado" : "string",
   "avatar" : "string",

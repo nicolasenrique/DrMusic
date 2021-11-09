@@ -6,12 +6,42 @@
   "email": "admin@drmusic.com",
   "telCelular": null,
   "telAlternativo": null,
-  "clave" : "1234"
+  "password" : "1234",
   "rol" : "admin",
   "estado" : "activo",
   "avatar" : "default.png",
   "fechaCreacion": "2021-06-01",
   "fechaModificacion": null,
   "fechaUltimoLogin" : null
-  }
+  },
+  {
+    "userId": 1,
+    "firstName": "nano",
+    "lastName": "ferreccio",
+    "email": "nano@nano.com",
+    "telCelular": null,
+    "telAlternativo": null,
+    "password" : "1234",
+    "rol" : "admin",
+    "estado" : "activo",
+    "avatar" : "default.png",
+    "fechaCreacion": "2021-06-01",
+    "fechaModificacion": null,
+    "fechaUltimoLogin" : null
+    },
+    {
+      "userId": 2,
+      "firstName": "Lionel",
+      "lastName": "Messi",
+      "email": "messi@messi.com",
+      "telCelular": null,
+      "telAlternativo": null,
+      "password" : "1234",
+      "rol" : "admin",
+      "estado" : "activo",
+      "avatar" : "default.png",
+      "fechaCreacion": "2021-06-01",
+      "fechaModificacion": null,
+      "fechaUltimoLogin" : null
+      }
 ]

@@ -3,7 +3,20 @@ const createError = require('http-errors');
 // const logger = require('morgan');
 
 const express = require("express");
+const session = require('express-session');
+
 const app = express();
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
+app.use(session({
+  secret: "Shhh, it's a secret",
+  resave: false,
+  saveUninitialized: false
+}));
+
+app.use(userLoggedMiddleware);
+
 const path = require("path");
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE 
 const publicPath = path.resolve(__dirname, "./public");

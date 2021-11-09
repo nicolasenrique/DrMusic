@@ -36,6 +36,10 @@ body {
   border-radius: 5px;
   width: 320px;
 }
+.text-danger {
+  color: #bf1304;
+  font-size: 14px;
+}
 .sign-in-buttom {
   margin: auto;
   width: 320px;

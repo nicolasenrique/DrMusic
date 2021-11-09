@@ -20,37 +20,42 @@
       <img class="mid-logo" src="/img/Dr-F2EDE4.png" alt="our-logo" />
     </div>
     <div>
-      <p class="message-sign-in">Sign in to your account</p>
+      <p class="message-sign-in">Inicia sesión en tu cuenta</p>
     </div>
 
-    <form action="/log-in" method="POST" class="main-form">
+    <form action="/users/login" method="POST" class="main-form">
       <div>
         <input
           type="email"
           name="email"
-          placeholder="Email Address"
+          placeholder="Email"
           class="mail"
         />
       </div>
+      <% if (locals.errors && errors.email) { %>
+        <div class="text-danger">
+          <%= errors.email.msg %>
+      </div>
+      <% } %>
       <div>
         <input
           type="password"
           name="password"
-          placeholder="Password"
+          placeholder="Contraseña"
           class="password"
         />
       </div>
       <div class="sign-in-buttom">
         <button type="submit" name="sign-in" class="sign-in-tex">
-          SIGN IN
+          INGRESAR
         </button>
       </div>
       <div>
-        <p class="forgot">FORGOT PASSWORD?</p>
+        <p class="forgot">OLVIDASTE TU CONTRASEÑA?</p>
       </div>
       <div class="dont-have">
-        <p class="dont-have-low">Don't have a Dr.Music's account?</p>
-        <a href="/users/register"><p class="dont-have-low-red">Sign up</p></a>
+        <p class="dont-have-low">No tienes cuenta en Dr. Music?</p>
+        <a href="/users/register"><p class="dont-have-low-red">Registrarse</p></a>
       </div>
     </form>
 
