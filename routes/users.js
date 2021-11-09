@@ -8,6 +8,10 @@ const usersController = require('../controllers/usersController');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
+//Formulario de Register
+
+router.get('/register', usersController.register);
+
 //Formulario de Login
 
 router.get('/login', guestMiddleware ,usersController.login);

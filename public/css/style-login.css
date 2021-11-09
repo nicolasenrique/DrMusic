@@ -40,6 +40,13 @@ body {
   color: #bf1304;
   font-size: 14px;
 }
+.recordame {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+
 .sign-in-buttom {
   margin: auto;
   width: 320px;
