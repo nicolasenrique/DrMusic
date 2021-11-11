@@ -39,11 +39,8 @@ const controlUsers = {
     let userToLogin = User.findByField("email", req.body.email);
 
     if (userToLogin) {
-      //let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
-      let isOkThePassword;
-      if (req.body.password == userToLogin.password) {
-        isOkThePassword = true;
-      }
+      let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+
       if (isOkThePassword) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin; //si todo esta bien, antes de redirigir a profile, quiero guardar el usuario en session
