@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="/css/style-register.css" />
     <title>Register - Dr Music</title>
   </head>
   <body>
-
     <!--INICIO DEL HEADER-->
     <%- include('./partials/header') %>
     <!--FIN DEL HEADER-->
@@ -20,60 +28,68 @@
       <img class="mid-logo" src="/img/Dr-F2EDE4.png" alt="our-logo" />
     </div>
     <div>
-      <p class="message-create">Create your account</p>
+      <p class="message-create">Crea tu cuenta</p>
     </div>
 
-    <form action="/log-in" method="POST" class="main-form">
+    <form action="/users/register" method="POST" enctype="multipart/form-data">
       <div class="complete-name">
-        <input type="text" name="name" placeholder="First Name" class="name" />
+        <input type="text" name="name" placeholder="Nombre" class="name" />
         <input
           type="text"
-          name="last-name"
-          placeholder="Last Name"
-          class="last-name"
+          name="lastName"
+          placeholder="Apellido"
+          class="lastName"
         />
       </div>
       <div class="this">
         <i class="fas fa-exclamation-triangle"></i>
-        <p>This cannot be blank</p>
+        <p>No puede estar vacío</p>
       </div>
-      <div>
+      <div class="complete-email">
         <input
           type="email"
           name="email"
-          placeholder="Email Address"
+          placeholder="Dirección de Email"
           class="mail"
         />
       </div>
-      <div>
+      <div class="complete-password">
         <input
           type="password"
           name="password"
-          placeholder="Password                   show"
+          placeholder="Contraseña"
           class="password"
+        />
+      </div>
+      <div class="complete-picture">
+        <input
+          type="file"
+          name="img"
+          accept="image/*"
+          class="avatar"
+          id="avatar"
         />
       </div>
       <div class="create-account-buttom">
         <button type="submit" name="create-account" class="create-account-tex">
-          CREATE ACCOUNT
+          CREAR CUENTA
         </button>
       </div>
 
       <div class="by">
-        <p class="by-low">By continuing, yoy agree to Dr. Music's</p>
-        <p class="by-low-red">Privacy Policy</p>
-        <p class="by-low">and</p>
-        <p class="by-low-red">Terms of use.</p>
+        <p class="by-low">Al continuar aceptas nuestra</p>
+        <p class="by-low-red">Política de Privacidad</p>
+        <p class="by-low">y</p>
+        <p class="by-low-red">Términos de Uso</p>
       </div>
       <div class="already">
-        <p class="already-low">Already have a Dr. Music account</p>
-        <a href="/users/login"><p class="already-low-red">Sign in</p></a>
+        <p class="already-low">¿Ya tenés una cuenta?</p>
+        <a href="/users/login"><p class="already-low-red">Ingresá ahora</p></a>
       </div>
     </form>
 
     <!--INICIO DEL FOOTER-->
     <%- include('./partials/footer') %>
     <!--FIN DEL FOOTER-->
-    
   </body>
 </html>

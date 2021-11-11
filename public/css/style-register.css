@@ -33,6 +33,15 @@ body {
   display: flex;
   justify-content: center;
 }
+.complete-email,
+.complete-password,
+.complete-picture {
+  display: flex;
+  justify-content: center;
+}
+.avatar {
+  border: 1px black solid;
+}
 .this {
   display: flex;
   justify-content: center;
@@ -41,14 +50,15 @@ body {
   align-self: center;
 }
 .mail,
-.password {
+.password,
+.avatar {
   margin: 10px;
   padding: 5px 10px;
   border-radius: 5px;
   width: 320px;
 }
 .name,
-.last-name {
+.lastName {
   margin: 10px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -96,6 +106,8 @@ body {
   margin: 0 5px 0 5px;
 }
 
+
+
 @media (min-width: 769px) {
   .full-logo {
     width: 10%;
@@ -104,7 +116,10 @@ body {
     font-size: 22px;
   }
   .mail,
-  .password, .name, .last-name {
+  .password,
+  .name,
+  .lastName,
+  .complete-picture {
     font-size: 14px;
   }
   .create-account-tex {
@@ -118,11 +133,12 @@ body {
   }
   .mail,
   .password,
-  .create-account-buttom {
+  .create-account-buttom,
+  .avatar {
     width: 500px;
   }
   .name,
-  .last-name {
+  .lastName {
     width: 240px;
   }
 }
@@ -134,7 +150,10 @@ body {
     font-size: 27px;
   }
   .mail,
-  .password,.name, .last-name {
+  .password,
+  .name,
+  .lastName,
+  .complete-picture {
     font-size: 16px;
   }
   .create-account-tex {
@@ -148,11 +167,12 @@ body {
   }
   .mail,
   .password,
-  .create-account-buttom {
+  .create-account-buttom,
+  .avatar {
     width: 600px;
   }
   .name,
-  .last-name {
+  .lastName {
     width: 290px;
   }
   .mid-logo {
