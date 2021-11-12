@@ -17,15 +17,21 @@ const controlUsers = {
     if (req.file !== undefined) {
       img = req.file.filename;
     }
-
-    userToCreate.userId = users[users.length - 1].userId + 1;
-    userToCreate.firstName = req.body.name;
-    userToCreate.lastName = req.body.lastName;
-    userToCreate.imagen = img;
-    userToCreate.email = req.body.email;
-    userToCreate.password = encryptedPass;
-    userToCreate.fechaCreacion = Date();
-    userToCreate.fechaModificacion = null;
+    // data mapping
+    userToCreate.userId             = users[users.length - 1].userId + 1;
+    userToCreate.firstName          = req.body.name;
+    userToCreate.lastName           = req.body.lastName;
+    userToCreate.email              = req.body.email;
+    userToCreate.telCelular         = null;
+    userToCreate.telAlternativo     = null;
+    userToCreate.password           = encryptedPass;
+    userToCreate.rol                = 'user';
+    userToCreate.estado             = 'activo';
+    userToCreate.avatar             = img;
+    userToCreate.fechaCreacion      = Date();
+    userToCreate.fechaModificacion  = null;
+    userToCreate.fechaUltimoLogin   = null;
+    //
     users.push(userToCreate);
     console.log(userToCreate);
     let usersJSON = JSON.stringify(users, null, 2);
@@ -37,6 +43,7 @@ const controlUsers = {
   },
   loginProcess: function (req, res) {
     let userToLogin = User.findByField("email", req.body.email);
+    console.log('userToLogin.rol->' + userToLogin.rol);
 
     if (userToLogin) {
       let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
