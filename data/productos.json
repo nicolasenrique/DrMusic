@@ -10,7 +10,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "esfumado",
+    "color": "esfumado",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -25,7 +25,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "negra",
+    "color": "negra",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -40,7 +40,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "blanca",
+    "color": "blanca",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -55,7 +55,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -70,7 +70,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -85,7 +85,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -100,7 +100,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "rojo",
+    "color": "rojo",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -115,7 +115,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -130,14 +130,14 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
   {
     "prodId": 10,
     "nombre": "Teclado Yamaha PSR-E273 61 teclas",
-    "descripcion": "Color negro",
+    "descripcion": "color negro",
     "precio": 79000,
     "imagen": "yamaha1.webp",
     "categoria": "teclado",
@@ -145,14 +145,14 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
   {
     "prodId": 11,
     "nombre": "Teclado Yamaha PSS Series PSS-F30 37",
-    "descripcion": "Color negro",
+    "descripcion": "color negro",
     "precio": 79000,
     "imagen": "yamaha2.webp",
     "categoria": "bajo",
@@ -160,14 +160,14 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
   {
     "prodId": 12,
     "nombre": "Teclado Yamaha PSR-E360 61 teclas",
-    "descripcion": "Color Arce",
+    "descripcion": "color Arce",
     "precio": 79000,
     "imagen": "yamaha3.webp",
     "categoria": "teclado",
@@ -175,7 +175,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -190,7 +190,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -205,7 +205,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -220,7 +220,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "Color": "azul",
+    "color": "azul",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   }
