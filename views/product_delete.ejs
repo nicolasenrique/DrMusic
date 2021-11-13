@@ -19,9 +19,9 @@
       <div class="column-3">2</div>
       <div class="column-3">
           <div class="testbox">
-            <form action="/products/admin" method="PUT" enctype="multipart/form-data">
+            <form action="/products/<%= product.prodId %>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
               <div class="banner">
-                <h1>Edición de productos</h1>
+                <h1>Borrado de productos</h1>
               </div>
 
               <div class="item">
@@ -33,11 +33,11 @@
                   </div>
                   <div>
                     <p>Nombre</p>
-                    <input type="text" id ="name" name="name" placeholder="Nombre" value=<%= product.nombre %>><br>
+                    <input type="text" id ="name" name="name" placeholder="Nombre" value=<%= product.nombre %> disabled><br>
                   </div>
                   <div class="item">
                     <p>Precio</p>
-                    <input type="number" name="precio" placeholder="$ 0.00" value=<%= product.precio %>>
+                    <input type="number" name="precio" placeholder="$ 0.00" value=<%= product.precio %> disabled>
                   </div>
                   <div class="item">
                     <p>Cantidad</p>
@@ -46,17 +46,16 @@
                 </div>
                 <div class="item">
                   <p>Descripción</p>
-                  <textarea name="descripcion"rows="3" placeholder="Incluya la descripción general del producto"> <%= product.descripcion %> </textarea>
+                  <textarea name="descripcion"rows="3" placeholder="Incluya la descripción general del producto" disabled> <%= product.descripcion %> </textarea>
                 </div>          
                 <div class="item">
-                  <p>Imagen asociada</p>
-                  <!-- <input type="email" name="email"/> -->
-                  <!-- <input type="file" id="img" name="img" accept="image/*"> -->
-                  <input type="file" name="img" accept="image/*">
+                  <p>Imagen producto</p>
+                  <!-- <input type="file" name="img" accept="image/*"> -->
+                  <img src="/img/products/<%= product.imagen %>"  alt=<%= product.nombre %> width="400" height="400">
                 </div>                
                 <div class="item">
                   <p>Categoría</p>
-                  <select name="categoria" required>
+                  <select name="categoria" disabled >
                     <option value="undefined">Seleccione una categoría</option>
                     <option value="guitarra" <%= product.categoria  == 'guitarra' ? 'selected' : ''%>>Guitarra</option>
                     <option value="bajo"  <%= product.categoria  == 'bajo' ? 'selected' : ''%>>Bajo</option>
@@ -69,14 +68,14 @@
                 <div class="item">
                   <p>Medidas</p>
                   <div class="dimensions"> 
-                    <select name="medidas" required>
+                    <select name="medidas" disabled>
                       <option value="cm" <%= product.medidas  == 'cm' ? 'selected' : ''%>>Centimetros</option>
                       <option value="inch" <%= product.medidas  == 'inch' ? 'selected' : ''%>>Pugadas</option>
                       <option value="metro" <%= product.medidas  == 'metro' ? 'selected' : ''%>>Metro</option>
                     </select>                            
-                    <input type="number" name="alto" placeholder="Alto" value=<%= product.alto %>>
-                    <input type="number" name="ancho" placeholder="Ancho" value=<%= product.ancho %>>
-                    <input type="number" name="profundidad" placeholder="Profundidad" value=<%= product.profundidad %>>
+                    <input type="number" name="alto" placeholder="Alto" value=<%= product.alto %> disabled>
+                    <input type="number" name="ancho" placeholder="Ancho" value=<%= product.ancho %> disabled>
+                    <input type="number" name="profundidad" placeholder="Profundidad" value=<%= product.profundidad %> disabled>
                   </div>
                 </div>
                 <div class="item">
@@ -84,39 +83,39 @@
                   <div class="multiple-items">       
                     <div>
                         <label for="silver">Silver </label>   
-                        <input type="radio" name="color" id="silver" value="silver" <%= product.color  == 'silver' ? 'checked' : ''%>>                                         
+                        <input type="radio" name="color" id="silver" value="silver" <%= product.color  == 'silver' ? 'checked' : ''%> disabled>                                         
                     </div>
                     <div>
                       <label for="gold">Gold</label>                    
-                      <input type="radio" name="color" id="gold" value="gold" <%= product.color  == 'gold' ? 'checked' : ''%>>                      
+                      <input type="radio" name="color" id="gold" value="gold" <%= product.color  == 'gold' ? 'checked' : ''%> disabled>                      
                     </div>
                     <div>
                       <label for="azul">Azul</label>
-                      <input type="radio" name="color" id="azul" value="azul" <%= product.color  == 'azul' ? 'checked' : ''%>>                       
+                      <input type="radio" name="color" id="azul" value="azul" <%= product.color  == 'azul' ? 'checked' : ''%> disabled>                       
                     </div>
                     <div>
                       <label for="rojo">Rojo</label>                    
-                      <input type="radio" name="color" id="rojo" value="rojo" <%= product.color  == 'rojo' ? 'checked' : ''%>>                       
+                      <input type="radio" name="color" id="rojo" value="rojo" <%= product.color  == 'rojo' ? 'checked' : ''%> disabled>                       
                     </div>
                     <div>
                       <label for="amarillo">Amarillo</label>
-                      <input type="radio" name="color" id="amarillo" value="amarillo" <%= product.color  == 'amarillo' ? 'checked' : ''%>>   
+                      <input type="radio" name="color" id="amarillo" value="amarillo" <%= product.color  == 'amarillo' ? 'checked' : ''%> disabled>   
                     </div>
                     <div>
                       <label for="verde">Verde</label>
-                      <input type="radio" name="color" id="verde" value="verde" <%= product.color  == 'verde' ? 'checked' : ''%>>                       
+                      <input type="radio" name="color" id="verde" value="verde" <%= product.color  == 'verde' ? 'checked' : ''%> disabled>                       
                     </div>
                     <div>
                       <label for="rosa">Rosa</label>
-                      <input type="radio" name="color" id="rosa" value="rosa" <%= product.color  == 'rosa' ? 'checked' : ''%>>                       
+                      <input type="radio" name="color" id="rosa" value="rosa" <%= product.color  == 'rosa' ? 'checked' : ''%> disabled>                       
                     </div>
                     <div>
                       <label for="blanco">Blanco</label>
-                      <input type="radio" name="color" id="blanco" value="blanco" <%= product.color  == 'blanco' ? 'checked' : ''%>>                       
+                      <input type="radio" name="color" id="blanco" value="blanco" <%= product.color  == 'blanco' ? 'checked' : ''%> disabled>                       
                     </div>
                     <div>
                       <label for="negro">Negro</label>
-                      <input type="radio" name="color" id="negro" value="negro" <%= product.color  == 'negro' ? 'checked' : ''%>>   
+                      <input type="radio" name="color" id="negro" value="negro" <%= product.color  == 'negro' ? 'checked' : ''%> disabled>   
                     </div>
                   </div>
                 </div>                  
@@ -131,8 +130,9 @@
               </div> -->
               <!-- <div class="item"> -->
                 <div class="multiple-items">
-                  <button type="submit" >GUARDAR</button>                
-                  <button type="cancel" href="/">CANCELAR</button>
+                  <button type="submit" >BORRAR</button>                
+                  <!-- <button type="button" href="/products/list">CANCELAR</button> -->
+                  <a href="/products/list"><button>CANCELAR</button></a>
                 </div>
               <!-- </div> -->
             </form>

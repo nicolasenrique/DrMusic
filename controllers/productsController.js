@@ -114,8 +114,21 @@ store: function(req,res){
 			return prod.prodId != id;
 		};
         grabaRegistros(productsNew);
+        // res.send('estamos en el detele!!');
         res.redirect('/products/list');
     
+    },
+    formDelete: (req, res) => {	
+        //
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        let product;
+        for (prod of products) {
+            if (prod.prodId == req.params.id){                
+                product = prod;
+                break;
+            }
+        };
+        res.render("product_delete", { product : product }); 
     }
 }
 

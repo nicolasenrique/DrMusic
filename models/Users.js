@@ -39,6 +39,22 @@ const User = {
         return userFound; 
 
     }, 
+    findByFieldMin: function(field, text){
+        let allUsers = this.findAll();
+        let userFound = allUsers.find(oneUser => oneUser[field] === text);
+        // datos irrelevantes, internos del sistema
+        delete userFound.telCelular;
+        delete userFound.telAlternativo;
+        delete userFound.fechaCreacion;
+        delete userFound.fechaModificacion;
+        delete userFound.fechaUltimoLogin;
+        delete userFound.telAlternativo;
+        // Datos sensibles 
+        delete userFound.userId;
+        delete userFound.lastName;        
+        return userFound;
+
+    }, 
     create: function(userData){
         let allUsers = this.findAll();
         let newUser = {

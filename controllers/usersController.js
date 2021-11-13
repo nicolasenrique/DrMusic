@@ -42,7 +42,8 @@ const controlUsers = {
     res.render("login");
   },
   loginProcess: function (req, res) {
-    let userToLogin = User.findByField("email", req.body.email);
+    // let userToLogin = User.findByField("email", req.body.email);
+    let userToLogin = User.findByFieldMin("email", req.body.email); //datos minimos necesarios
     console.log('userToLogin.rol->' + userToLogin.rol);
 
     if (userToLogin) {
@@ -51,6 +52,10 @@ const controlUsers = {
       if (isOkThePassword) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin; //si todo esta bien, antes de redirigir a profile, quiero guardar el usuario en session
+        
+        if (req.body.recordarme != undefined){ // si el usuario tildó el checkbox 'recordarme' guarda en la cookie el valor del usuario
+            res.cookie ('recordarme', userToLogin, {maxAge : 60000});  
+        }
         return res.redirect("/users/profile");
       }
     }

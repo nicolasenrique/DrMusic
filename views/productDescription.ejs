@@ -157,12 +157,15 @@
               <div>
                   <a href="/products/<%=selectedProduct.prodId%>/edit"><button class="edit-btn">Editar</button></a>
               </div>
-              <form action="/products/<%= selectedProduct.prodId %>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
               <div>
-                  <button type="submit" class="buy-btn" >Borrar</button>
-                       <input type="hidden"  name="id" id="id"  value=<%= selectedProduct.prodId%> >
-
+                <a href="/products/<%= selectedProduct.prodId %>/delete"><button class="buy-btn">Borrar</button></a>
               </div>
+                <form action="/products/<%= selectedProduct.prodId %>/delete" method="GET">
+              <!-- <div>
+                  <button type="submit" class="buy-btn" >Borrar</button>
+                       <input type="hidden"  name="id" id="id"  value=<%= selectedProduct.prodId%> > -->
+
+              <!-- </div> --> 
             </form>
 
               

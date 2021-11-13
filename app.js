@@ -1,5 +1,5 @@
 const createError = require('http-errors');
-// const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 // const logger = require('morgan');
 
 const express = require("express");
@@ -7,7 +7,9 @@ const session = require('express-session');
 
 const app = express();
 
+const recordarmeMiddleware = require('./middlewares/recordarmeMiddleware');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
 
 app.use(session({
   secret: "Shhh, it's a secret",
@@ -15,6 +17,8 @@ app.use(session({
   saveUninitialized: false
 }));
 
+// middlewares ejecutados siempre
+app.use(recordarmeMiddleware);
 app.use(userLoggedMiddleware);
 
 const path = require("path");
@@ -29,6 +33,7 @@ const carritoRouter = require("./routes/carrito");
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(cookieParser());
 
 
 app.use("/", mainRouter);
