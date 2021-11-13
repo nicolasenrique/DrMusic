@@ -10,7 +10,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "color": "esfumado",
+    "color": "silver",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -25,7 +25,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "color": "negra",
+    "color": "negro",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
@@ -40,7 +40,7 @@
     "alto": 110,
     "ancho": 36,
     "profundidad": 9,
-    "color": "blanca",
+    "color": "blanco",
     "fechaCreacion": "2021-06-15",
     "fechaModificacion": null
   },
