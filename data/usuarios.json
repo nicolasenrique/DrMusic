@@ -1,18 +1,18 @@
-[ 
- {
-  "userId": 0,
-  "firstName": "admin",
-  "lastName": "admin",
-  "email": "admin@drmusic.com",
-  "telCelular": null,
-  "telAlternativo": null,
-  "password": "$2a$10$WaTgvQSSrElOIqV7uEOpUeAHIkdDmTxWgGuKojsUi3YBYKL0XS5E.",
-  "rol" : "admin",
-  "estado" : "activo",
-  "avatar" : "default.png",
-  "fechaCreacion": "2021-06-01",
-  "fechaModificacion": null,
-  "fechaUltimoLogin" : null
+[
+  {
+    "userId": 0,
+    "firstName": "admin",
+    "lastName": "admin",
+    "email": "admin@drmusic.com",
+    "telCelular": null,
+    "telAlternativo": null,
+    "password": "$2a$10$WaTgvQSSrElOIqV7uEOpUeAHIkdDmTxWgGuKojsUi3YBYKL0XS5E.",
+    "rol": "admin",
+    "estado": "activo",
+    "avatar": "default.png",
+    "fechaCreacion": "2021-06-01",
+    "fechaModificacion": null,
+    "fechaUltimoLogin": null
   },
   {
     "userId": 1,
@@ -22,26 +22,41 @@
     "telCelular": null,
     "telAlternativo": null,
     "password": "$2a$10$WaTgvQSSrElOIqV7uEOpUeAHIkdDmTxWgGuKojsUi3YBYKL0XS5E.",
-    "rol" : "user",
-    "estado" : "activo",
-    "avatar" : "default.png",
+    "rol": "user",
+    "estado": "activo",
+    "avatar": "default.png",
     "fechaCreacion": "2021-06-01",
     "fechaModificacion": null,
-    "fechaUltimoLogin" : null
-    },
-    {
-      "userId": 2,
-      "firstName": "Lionel",
-      "lastName": "Messi",
-      "email": "messi@messi.com",
-      "telCelular": null,
-      "telAlternativo": null,
-      "password": "$2a$10$WaTgvQSSrElOIqV7uEOpUeAHIkdDmTxWgGuKojsUi3YBYKL0XS5E.",
-      "rol" : "user",
-      "estado" : "activo",
-      "avatar" : "default.png",
-      "fechaCreacion": "2021-06-01",
-      "fechaModificacion": null,
-      "fechaUltimoLogin" : null
-      }
+    "fechaUltimoLogin": null
+  },
+  {
+    "userId": 2,
+    "firstName": "Lionel",
+    "lastName": "Messi",
+    "email": "messi@messi.com",
+    "telCelular": null,
+    "telAlternativo": null,
+    "password": "$2a$10$WaTgvQSSrElOIqV7uEOpUeAHIkdDmTxWgGuKojsUi3YBYKL0XS5E.",
+    "rol": "user",
+    "estado": "activo",
+    "avatar": "default.png",
+    "fechaCreacion": "2021-06-01",
+    "fechaModificacion": null,
+    "fechaUltimoLogin": null
+  },
+  {
+    "userId": 3,
+    "firstName": "Stan",
+    "lastName": "Lee",
+    "email": "theman@marvel.com",
+    "telCelular": null,
+    "telAlternativo": null,
+    "password": "$2a$10$ooY3qj54AckwynQDbSM88O.bKMi.6zKr.joL5IBtGkTThUOz7/E/K",
+    "rol": "user",
+    "estado": "activo",
+    "avatar": "img-1637096739308.jpeg",
+    "fechaCreacion": "Tue Nov 16 2021 18:05:39 GMT-0300 (hora estándar de Argentina)",
+    "fechaModificacion": null,
+    "fechaUltimoLogin": null
+  }
 ]
