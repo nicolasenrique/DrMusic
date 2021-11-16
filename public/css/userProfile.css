@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f2ede4;
+}
+.main-body{
+  padding: 10px;
+}
+.rounded-circle p {
+  margin: 0;
+}
+.rounded-circle {
+  background-color: #f2ede4;
+  display: inline-block;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.lista-datos {
+  list-style-type: none;
+}
+.datos {
+  margin-left: 10px;
+}
