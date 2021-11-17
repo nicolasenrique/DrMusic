@@ -48,14 +48,14 @@
     "userId": 3,
     "firstName": "Stan",
     "lastName": "Lee",
-    "email": "stan@drmusic.com",
+    "email": "user@drmusic.com",
     "telCelular": null,
     "telAlternativo": null,
-    "password": "$2a$10$ooY3qj54AckwynQDbSM88O.bKMi.6zKr.joL5IBtGkTThUOz7/E/K",
+    "password": "$2a$10$CZlczixtUUSZysA66l54aec9V1nnixxaMBmGcx2KqnT/ol0NjnOxe",
     "rol": "user",
     "estado": "activo",
-    "avatar": "img-1637096739308.jpeg",
-    "fechaCreacion": "Tue Nov 16 2021 18:05:39 GMT-0300 (hora estándar de Argentina)",
+    "avatar": "img-1637109671919.jpeg",
+    "fechaCreacion": "Tue Nov 16 2021 21:41:12 GMT-0300 (hora estándar de Argentina)",
     "fechaModificacion": null,
     "fechaUltimoLogin": null
   }
