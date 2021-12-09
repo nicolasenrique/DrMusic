@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Product"; // es un apodo de como le voy a decir a sequelize que se llama la tabla.
     
     let cols = {
-        id_products: {
+        id_product: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     let config = {
-        tableName: "products",
+        tableName: "product",
         timestamps: false
     }
 
@@ -37,11 +37,11 @@ module.exports = (sequelize, dataTypes) => {
     Product.associate = function(models) {
         Product.belongsTo(models.Color, {
             as: "color",
-            foreignKey: "id_color"
+            foreignKey: "id_colors"
         });
-        Product.belongsTo(models.Prod_Category, {
+        Product.belongsTo(models.ProdCategory, {
             as: "prod_category",
-            foreignKey: "id_category"
+            foreignKey: "id_prod_category"
         });
 
     }

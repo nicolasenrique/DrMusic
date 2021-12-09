@@ -30,5 +30,6 @@ router.get('/:id/edit', authAdminMiddleware,      productsController.edit);
 router.put('/update',   upload.single('imagen'),  productsController.update);
 router.get('/:id/delete', authAdminMiddleware,    productsController.formDelete);
 router.delete('/:id/delete',authAdminMiddleware,  productsController.delete);
-
+// BD endpoints
+router.get("/db/list",                               productsController.detail_db);
 module.exports = router;

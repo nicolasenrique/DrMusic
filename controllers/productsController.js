@@ -1,10 +1,14 @@
 const fs = require("fs");
 const path = require("path");
+// acceso a BD
+let   db = require('../database/models');
+const Op = db.Sequelize.Op;
 
 const productsFilePath = path.join(__dirname, "../data/productos.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 
 function grabaRegistros (products) {
@@ -30,8 +34,24 @@ detail: function (req, res) {
     };
     res.render("productDescription", { selectedProduct : product });   
 },
+
+detail_db: function (req, res) {
+//     db.Product.findByPk(req.params.id, {
+//         include: [{association: "color" },{association: "prod_category"}]
+//     })
+//         .then(function(product){
+//             res.render('productDescription', { selectedProduct : product  } );
+//         });   
+
+    db.Product.findAll({
+        include: [{association: "color" }, {association: "prod_category" }]
+    })
+        .then((products) => { 
+            res.send(products);
+            // console.log(products)
+        });
+},
 create: function(req,res){
-    console.log('estoy en el CREATE');
     res.render('product_create');
 },
 store: function(req,res){

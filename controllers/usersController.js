@@ -4,6 +4,9 @@ const bcryptjs = require("bcryptjs");
 const User = require("../models/Users");
 const usersFilePath = path.join(__dirname, "../data/usuarios.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+// acceso a BD
+let   db = require('../database/models');
+const Op = db.Sequelize.Op;
 
 const controlUsers = {
   register: function (req, res) {
