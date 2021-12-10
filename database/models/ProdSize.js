@@ -6,13 +6,13 @@ module.exports = function(sequelize, dataTypes) {
         id_prod_size: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true,
+            autoIncrement: true
         },
         type: {
             type: dataTypes.BOOLEAN
         },
-        heigth: {
-            type: dataTypes.DOBLE                     
+        height: {
+            type: dataTypes.DOUBLE                     
         },
         width: {
             type: dataTypes.DOUBLE                     
@@ -26,15 +26,16 @@ module.exports = function(sequelize, dataTypes) {
         tableName: "prod_size",
         timestamps: false
     }
-    let ProdPrice = sequelize.define(alias, cols, config);
+    let ProdSize = sequelize.define(alias, cols, config);
 
-    ProdPrice.associate = function(models) {
-        ProdSize.belongsTo(models.Product, {
-            as: "prod_size",
-            foreignKey: "id_product"
-        })
-    }
 
+    // ProdSize.associate = function(models) {
+    //     ProdSize.belongsTo(models.Product, {
+    //         as: "prod_size",
+    //         foreignKey: "id_product"
+    //     });
+
+    // }
     return ProdSize;
 
 }
