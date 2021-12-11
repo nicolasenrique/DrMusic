@@ -2,7 +2,7 @@ module.exports = function (sequelize, dataTypes) {
   let alias = "User";
 
   let cols = {
-    id_users: {
+    id_user: {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -26,29 +26,29 @@ module.exports = function (sequelize, dataTypes) {
       type: dataTypes.STRING,
     },
     creation_date: {
-      type: dataTypes.DATETIME,
+      type: dataTypes.DATE,
     },
     last_login: {
-      type: dataTypes.DATETIME,
+      type: dataTypes.DATE,
     },
   };
 
   let config = {
-    tableName: "users",
+    tableName: "user",
     timestamps: false,
   };
 
   let User = sequelize.define(alias, cols, config);
 
   User.associate = function (models) {
-    User.belongsTo(models.User_category, {
+    User.belongsTo(models.UserCategory, {
       as: "category",
-      foreignKey: "id_user_category",
+      foreignKey: "id_user_category"
     });
 
-    User.belongsTo(models.User_status, {
+    User.belongsTo(models.UserStatus, {
       as: "status",
-      foreignKey: "id_user_status",
+      foreignKey: "id_user_status"
     });
   };
 

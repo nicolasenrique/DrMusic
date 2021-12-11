@@ -43,13 +43,28 @@ detail_db: function (req, res) {
 //             res.render('productDescription', { selectedProduct : product  } );
 //         });   
 
-    db.Product.findAll({
-        include: [{association: "color" }, {association: "prod_category" }]
-    })
-        .then((products) => { 
-            res.send(products);
-            // console.log(products)
-        });
+db.Product.findAll({
+    include: [
+        // {association: "color" }, 
+        // {association: "prod_size" }, 
+        // {association: "prod_category" }, 
+        // {association: "prod_image" }, 
+        {association: "prod_price" }
+    ]
+})
+    .then((products) => { 
+        // console.log(products); 
+        for(i=0; i < products.length; i++){
+            console.log('Id Producto: ' + products[i].id_product);
+            console.log('Producto: ' + products[i].description);
+            for(j=0; j < products[i].prod_price.length; j++) { 
+                console.log('Precio Producto: ' + products[i].prod_price[j].price);
+            }
+
+        }
+        res.send(products);
+
+    });
 },
 create: function(req,res){
     res.render('product_create');
